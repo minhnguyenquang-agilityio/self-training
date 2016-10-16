@@ -1,3 +1,13 @@
-h1 {
-  color: red;
-}
+/* Import all styles of app */
+@import
+  'compass',
+  // 'compass/typography/lists',
+  'vendor/all',
+  'state/bootstrap-variables',
+  'state/bootstrap-import',
+  'base/all',
+  'helper/all',
+  'modules/all',
+  'layout/all',
+  'state/all',
+  'theme/all';

@@ -1,0 +1,42 @@
+/* Basic definitions */
+body {
+  @extend %helvetica-neue-regular, %cl-default;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  @extend %no-margin, %no-padding;
+  font-weight: normal;
+  font-size: 100%;
+}
+
+a {
+  @extend %no-text-decoration;
+
+  &,
+  &:hover,
+  &:focus,
+  &:active,
+  &:active:focus,
+  a:visited {
+    outline: 0 !important;
+    outline-style: none;
+  }
+}
+
+ul {
+  @extend %no-list-style, %no-padding, %no-margin;
+}
+
+label {
+  font-weight: normal;
+}
+
+address {
+  font-style: normal;
+}
