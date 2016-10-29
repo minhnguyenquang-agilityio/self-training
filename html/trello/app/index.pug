@@ -2,12 +2,15 @@ doctype html
 html(lang='en')
   head
     title Jade
+    link(rel="stylesheet" type="text/css" href="css/main.css")
   body
-    h1 Jade - node template engine
-    #container.col
-      p You are amazing
-      p
-        | Jade is a terse and simple
-        | templating language with a
-        | strong focus on performance
-        | and powerful features.
+    include layouts/header
+    .container-fluid
+      .row
+        include layouts/board
+        include layouts/board
+        include layouts/board
+        include layouts/board
+        include layouts/board
+        include layouts/board
+        include layouts/board

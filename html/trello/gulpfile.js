@@ -1,11 +1,11 @@
-var gulp        = require('gulp');
-var browserSync = require('browser-sync').create();
-var sass        = require('gulp-ruby-sass');
-var pug         = require('gulp-pug');
+var gulp         = require('gulp');
+var browserSync  = require('browser-sync').create();
+var sass         = require('gulp-ruby-sass');
+var pug          = require('gulp-pug');
 var autoprefixer = require('gulp-autoprefixer');
 
 // Static Server + watching scss/html files
-gulp.task('serve', ['sass', 'pug'], function() {
+gulp.task('serve', ['sass', 'pug', 'assets'], function() {
 
   browserSync.init({
     server: "./dist"
@@ -34,6 +34,11 @@ gulp.task('pug', function() {
   }))
   .pipe(gulp.dest('dist'))
   .pipe(browserSync.stream());
+});
+
+gulp.task('assets', function(){
+  return gulp.src('app/assets/**/*.*')
+    .pipe(gulp.dest('dist/assets'));
 });
 
 gulp.task('default', ['serve']);
