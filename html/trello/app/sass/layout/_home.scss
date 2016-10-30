@@ -1,0 +1,14 @@
+.board-section {
+  &-starred {
+    @extend %font-weight-bold;
+    padding: 30px 0 15px 10px;
+    font-size: 19px;
+
+    i {
+      @extend %font-weight-bold;
+      width: 25px;
+      color: $board-section-title-icon-color;
+      font-size: 22px;
+    }
+  }
+}
