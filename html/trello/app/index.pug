@@ -5,12 +5,54 @@ html(lang='en')
     link(rel="stylesheet" type="text/css" href="css/main.css")
   body
     include layouts/header
-    .container-fluid
-      .row
-        include layouts/board
-        include layouts/board
-        include layouts/board
-        include layouts/board
-        include layouts/board
-        include layouts/board
-        include layouts/board
+    .container
+      section.board-section
+        h2.board-section-starred
+          i.fa.fa-star-o
+          |  Starred Boards
+        .row
+          .col-xs-12.col-sm-6.col-md-4.col-lg-3
+            .board.board-tile.board-starred
+              a.title(href="#") A board
+              span.star
+                i.fa.fa-star-o
+          .col-xs-12.col-sm-6.col-md-4.col-lg-3
+            .board.board-tile.board-starred
+              a.title(href="#") A board
+              span.star
+                i.fa.fa-star-o
+
+      section.board-section
+        h2.board-section-starred
+          i.fa.fa-user-o
+          |  Personal Boards
+        .row
+          .col-xs-12.col-sm-6.col-md-4.col-lg-3
+            .board.board-tile.board-starred
+              a.title(href="#") A board
+              span.star
+                i.fa.fa-star-o
+          .col-xs-12.col-sm-6.col-md-4.col-lg-3
+            .board.board-tile
+              a.title(href="#") A board
+              span.star
+                i.fa.fa-star-o
+          .col-xs-12.col-sm-6.col-md-4.col-lg-3
+            .board.board-tile.board-starred
+              a.title(href="#") A board
+              span.star
+                i.fa.fa-star-o
+          .col-xs-12.col-sm-6.col-md-4.col-lg-3
+            .board.board-tile
+              a.title(href="#") A board
+              span.star
+                i.fa.fa-star-o
+          .col-xs-12.col-sm-6.col-md-4.col-lg-3
+            .board.board-tile
+              a.title(href="#") A board
+              span.star
+                i.fa.fa-star-o
+          .col-xs-12.col-sm-6.col-md-4.col-lg-3
+            .board.board-mod-add
+              a.title(href="#") Create new board...
+
