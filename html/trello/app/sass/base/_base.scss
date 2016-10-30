@@ -1,6 +1,7 @@
 /* Basic definitions */
 body {
   @extend %helvetica-neue-regular, %cl-default;
+  background-color: $main-bg-color;
 }
 
 h1,

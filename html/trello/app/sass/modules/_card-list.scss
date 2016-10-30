@@ -1,0 +1,14 @@
+.list {
+  @extend %float-left;
+  @include border-radius(3px);
+  width: 270px;
+  margin-right: 20px;
+  background-color: $board-bg-color;
+  padding: 6px;
+  overflow-y: auto;
+
+  &-title {
+    @extend %color-black, %font-weight-bold;
+    color: $list-title-color;
+  }
+}

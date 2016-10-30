@@ -1,8 +1,8 @@
 .board {
   @extend %float-left, %relative, %full-width;
+  @include border-radius(3px);
   height: 96px;
   margin-bottom: 15px;
-  border-radius: 3px;
 
   &-tile {
     background-color: $main-bg-color;

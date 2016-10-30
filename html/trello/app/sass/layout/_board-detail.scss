@@ -1,0 +1,19 @@
+.board-detail {
+  height: calc(100vh - 38px);
+  background-color: $main-bg-color;
+  padding: 0 10px;
+
+  .board-header {
+    @extend %display-flex, %align-items-center;
+    height: 50px;
+
+    .board-title {
+      @extend %color-white, %font-weight-bold;
+      font-size: 22px;
+    }
+  }
+
+  .board-content {
+    max-height: calc(100% - 50px);
+  }
+}
