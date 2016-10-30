@@ -1,0 +1,48 @@
+.board {
+  @extend %float-left, %relative, %full-width;
+  height: 96px;
+  margin-bottom: 15px;
+  border-radius: 3px;
+
+  &-tile {
+    background-color: $main-bg-color;
+  }
+
+  &#{&}-mod-add {
+
+    background-color: $board-mod-add-bg-color;
+    .title {
+      @extend %display-flex, %justify-content-center, %align-items-center, %full-width, %full-height;
+      color: $main-text-color;
+    }
+  }
+
+  .title {
+    @extend %block, %full-height, %color-white;
+    padding: 8px 12px;
+    font-size: 16px;
+
+    &:hover + .star {
+      @extend %block;
+    }
+  }
+
+  .star {
+    @extend %absolute, %top-0, %right-0, %hide, %color-white;
+    padding: 5px;
+    font-size: 18px;
+    top: 5px;
+    right: 5px;
+
+    &:hover {
+      @extend %cursor-pointer, %block;
+    }
+  }
+
+  &-starred {
+    .star {
+      @extend %block;
+      color: $board-starred-color;
+    }
+  }
+}
