@@ -4,8 +4,6 @@
   margin-right: 20px;
   background-color: $board-bg-color;
   padding: 6px;
-  overflow-y: auto;
-  max-height: 100%;
 
   &-wrapper {
     @extend %full-height, %inline-block;

@@ -1,5 +1,7 @@
 .cards {
   margin-top: 5px;
+  max-height: calc(80vh - 75px);
+  overflow-y: auto;
 }
 
 .card {
