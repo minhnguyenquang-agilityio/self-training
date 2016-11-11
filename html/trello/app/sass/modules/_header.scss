@@ -4,6 +4,7 @@
   background-color: $main-header-bg-color;
 
   .logo {
+    @extend %no-margin;
     padding-top: 5px;
 
     a {

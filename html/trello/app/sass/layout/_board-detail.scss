@@ -1,5 +1,5 @@
 .board-detail {
-  height: calc(100vh - 50px);
+  height: calc(100vh - 38px);
   background-color: $main-bg-color;
   padding: 0 10px;
 
@@ -16,11 +16,11 @@
   .board-content {
     white-space: nowrap;
     height: 100%;
-    padding-bottom: 30px;
+    padding-bottom: 15px;
 
     &-wrapper {
       overflow-x: auto;
-      height: calc(100% - 58px);
+      height: calc(100% - 60px);
     }
   }
 }
