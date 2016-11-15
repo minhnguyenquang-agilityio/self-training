@@ -6,15 +6,24 @@ import { Hero } from './hero';
   template: `
     <div *ngIf="hero">
       <h2>{{hero.name}} details!</h2>
-      <div><label>id: </label>{{hero.id}}</div>
+      <div>
+        <label>id: </label>{{hero.id}}
+      </div>
       <div>
         <label>name: </label>
         <input [(ngModel)]="hero.name" placeholder="name"/>
       </div>
     </div>
-  `
+  `,
+  styles: [
+    'hero-detail.component.css'
+  ]
 })
 export class HeroDetailComponent {
-  @Input()
-  hero: Hero;
+  @Input() hero: Hero;
+
+  goBack(): void {
+    this.location.back();
+  }
+
 }
