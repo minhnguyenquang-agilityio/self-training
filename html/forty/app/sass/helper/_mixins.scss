@@ -1,0 +1,82 @@
+/* Mixin definitions */
+$font-path: 'assets/fonts/';
+$image-path: 'assets/images/';
+
+/* Convert from px to em */
+@function strip-unit($num, $parent-font-size) {
+  @return $num/$parent-font-size;
+}
+
+/* Function convert from px to em */
+@function em($parent, $values...) {
+  $max: length($values);
+  $em-values: '';
+
+  @for $i from 1 through $max {
+    $value: strip-unit(nth($values,$i), $parent);
+    $em-values: #{$em-values + $value}em;
+
+      @if $i < $max {
+        $em-values: #{$em-values + " "};
+      }
+  }
+  @return $em-values;
+}
+
+/* Mixin for font face */
+@mixin font-face($font-name) {
+  @font-face {
+    font-family: $font-name;
+    src: url($font-path + $font-name + '.eot');
+    src: url($font-path + $font-name + '.eot?#iefix') format('embedded-opentype'),
+         url($font-path + $font-name + '.woff') format('woff'),
+         url($font-path + $font-name + '.ttf') format('truetype'),
+         url($font-path + $font-name + '.svg#') format('svg');
+  }
+}
+
+/* Border radius */
+@mixin border-radius($radius) {
+  @include border-top-radius($radius);
+  @include border-right-radius($radius);
+  @include border-bottom-radius($radius);
+  @include border-left-radius($radius);
+}
+
+/* Background image mixin
+ * $image: is name and type of image
+ */
+@mixin background-image($image) {
+  background-image: url('#{$image-path+$image}');
+}
+
+/* Function to random color */
+@function randomColor() {
+  $r: random(255);
+  $g: random(255);
+  $b: random(255);
+
+  $r: ($r + 255) / 2;
+  $g: ($g + 255) / 2;
+  $b: ($b + 255) / 2;
+  @return rgb($r, $g, $b);
+}
+
+@mixin linkState () {
+  &,
+  &:hover,
+  &:focus,
+  &:active,
+  &:active:focus {
+    @content;
+  }
+}
+
+/* Background sprite */
+@mixin backgroundSprite ($width, $height, $value1, $value2) {
+
+  // FIX ME: Will update unit from px to em
+  width: #{$width}px;
+  height: #{$height}px;
+  background-position: #{$value1}px #{$value2}px;
+}
