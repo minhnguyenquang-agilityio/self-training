@@ -1,6 +1,6 @@
 /* Basic definitions */
 body {
-  @extend %cl-default, %source-sans-pro;
+  @extend %cl-default, %source-sans-pro, %bgc-default;
 }
 
 h1,

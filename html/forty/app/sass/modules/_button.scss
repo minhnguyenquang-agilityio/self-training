@@ -1,0 +1,23 @@
+.btn {
+  @extend %inline-block, %font-weight-bold, %text-uppercase;
+  font-size: em($base-font-size, 14);
+  padding: em($base-font-size, 14) em($base-font-size, 22);
+  border: 2px solid $white;
+  margin-left: 5px;
+
+  @include linkState {
+    @extend %cursor-pointer;
+    border-color: $btn-hover-bg-color;
+    background-color: $btn-hover-bg-color;
+  }
+
+  &--transparent {
+    background-color: transparent;
+  }
+
+  &--background {
+    background-color: $white;
+    color: $primary-color;
+  }
+
+}

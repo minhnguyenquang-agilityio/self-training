@@ -63,7 +63,6 @@ $image-path: 'assets/images/';
 }
 
 @mixin linkState () {
-  &,
   &:hover,
   &:focus,
   &:active,
