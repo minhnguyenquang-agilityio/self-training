@@ -1,0 +1,394 @@
+/* Global extend definitions */
+
+/* Class extend colors */
+%color-black{
+  color: $black
+}
+
+%color-white {
+  color: $white;
+}
+
+/* Class extend font-family */
+%helvetica-neue-regular {
+  font-family: $helvetica-neue-regular;
+}
+
+%helvetica-neue-bold {
+  font-family: $helvetica-neue-bold;
+}
+
+%helvetica-neue-medium {
+  font-family: $helvetica-neue-medium;
+}
+
+%helvetica-neue-light {
+  font-family: $helvetica-neue-light;
+}
+
+/* Class extend for text style */
+%text-no-transform {
+  text-transform: none;
+}
+
+%text-uppercase {
+  text-transform: uppercase;
+}
+
+%text-capitalize {
+  text-transform: capitalize;
+}
+
+%text-center {
+  text-align: center;
+}
+
+%text-left {
+  text-align: left;
+}
+
+%text-right {
+  text-align: right;
+}
+
+%no-text-decoration {
+  &,
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+}
+
+%no-list-style {
+  list-style: none;
+}
+
+%text-underline {
+  text-decoration: underline;
+}
+
+%no-text-shadow {
+  text-shadow: none;
+}
+
+%truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+%no-pointer-events {
+  pointer-events: none;
+}
+
+/* Class extend for vertical align */
+%vertical-middle {
+  vertical-align: middle;
+}
+
+%vertical-bottom {
+  vertical-align: bottom;
+}
+
+%vertical-top {
+  vertical-align: top;
+}
+
+/* Class extend for position */
+%relative {
+  position: relative;
+}
+
+%absolute {
+  position: absolute;
+}
+
+%fixed {
+  position: fixed;
+}
+
+%full-width {
+  width: 100%;
+}
+
+%full-height {
+  height: 100%;
+}
+
+%left-0 {
+  left: 0;
+}
+
+%right-0 {
+  right: 0;
+}
+
+%top-0 {
+  top: 0;
+}
+
+%bottom-0 {
+  bottom: 0;
+}
+
+%left-top-0 {
+  left: 0;
+  top: 0;
+}
+
+/* Class extend for display */
+%inline-block {
+  display: inline-block;
+}
+
+%inline {
+  display: inline;
+}
+
+%table {
+  display: table;
+}
+
+%table-row {
+  display: table-row;
+}
+
+%table-cell {
+  display: table-cell;
+}
+
+%hide {
+  display: none;
+}
+
+%block {
+  display: block;
+}
+
+%overflow-hidden {
+  overflow: hidden;
+}
+
+%clear-both {
+  clear: both;
+}
+
+/* Class extend for margin/padding */
+%no-margin {
+  margin: 0;
+}
+
+%margin-auto {
+  margin: 0 auto;
+}
+
+%no-margin-bottom {
+  margin-bottom: 0;
+}
+
+%no-margin-top {
+  margin-top: 0;
+}
+
+%no-margin-right {
+  margin-right: 0;
+}
+
+%no-margin-left {
+  margin-left: 0;
+}
+
+%no-padding {
+  padding: 0;
+}
+
+%no-padding-left {
+  padding-left: 0;
+}
+
+%no-padding-right {
+  padding-right: 0;
+}
+
+%no-padding-top {
+  padding-top: 0;
+}
+
+%no-padding-bottom {
+  padding-bottom: 0;
+}
+
+/* Class extend for border */
+%border-collapse {
+  border-collapse: separate;
+}
+
+%no-border {
+  border: 0;
+}
+
+%no-border-bottom{
+  border-bottom: 0;
+}
+
+%no-border-top {
+  border-top: 0;
+}
+
+%no-border-left {
+  border-left: 0;
+}
+
+%no-border-right {
+  border-right: 0;
+}
+
+%no-border-radius {
+  border-radius: 0;
+}
+
+%border-color-celeste {
+  border-color: $celeste;
+}
+
+/* Class extend for background */
+%background-transparent {
+  background-color: transparent;
+}
+
+%background-white {
+  background-color: $white;
+}
+/* Class extend for font */
+%font-weight-bold {
+  font-weight: bold;
+}
+
+%font-weight-normal {
+  font-weight: normal;
+}
+
+/* Class extend for float */
+%float-left {
+  float: left;
+}
+
+%float-right {
+  float: right;
+}
+
+%no-outline {
+  &:focus,
+  &:hover,
+  &:active:focus {
+    outline: none;
+  }
+}
+
+/* Class extend for box */
+%no-box-shadow {
+  box-shadow: none;
+}
+
+/* Cursor */
+%cursor-pointer {
+  cursor: pointer;
+}
+
+/* Class extend for button common */
+%btn-common {
+  @extend %helvetica-neue-medium;
+  @extend %cursor-pointer;
+  @include border-radius(em(16, 5));
+  font-size: em(16, 15);
+  letter-spacing: 1px;
+  @extend %no-text-decoration;
+}
+
+/* Hover state for input text and select box */
+%hover-state {
+  @extend %no-outline;
+  &:focus,
+  &:hover {
+    @include box-shadow(0 0 em(16, 2) rgba(0,0,0,0.4));
+    border-color: $celeste;
+    border-radius: em(16, 5);
+  }
+}
+
+%centered {
+  @extend %absolute;
+  @include transform(translate(-50%, -50%));
+  top: 50%;
+  left: 50%;
+}
+
+/* Colors */
+%cl-default {
+  color: $main-text-color;
+}
+
+%cl-danger {
+  color: $main-red;
+}
+
+%cl-success {
+  color: $main-green;
+}
+
+%cl-white {
+  color: $white;
+}
+
+/* Background Color */
+%bgc-default {
+  background-color: $main-bg-color;
+}
+
+%bgc-danger {
+  background-color: $main-red;
+}
+
+%bgc-success {
+  background-color: $main-green;
+}
+
+%bgc-white {
+  background-color: $white;
+}
+
+/* Flexbox */
+%display-flex {
+  @include display-flex;
+}
+
+%flex-direction-row {
+  @include flex-direction(row);
+}
+
+%flex-direction-col {
+  @include flex-direction(column);
+}
+
+%justify-content-center {
+  @include justify-content(center);
+}
+
+%justify-content-flex-start {
+  @include justify-content(flex-start);
+}
+
+%align-items-center {
+  @include align-items(center);
+}
+
+/* For doctor item in list doctors */
+%list-doctors__item {
+  @extend %float-left;
+  padding-left: em($base-font-size, 5);
+  padding-right: em($base-font-size, 5);
+}
+
+%transition-ease-out-all {
+  transition: all 0.3s ease-out;
+}

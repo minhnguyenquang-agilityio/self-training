@@ -1,0 +1,12 @@
+/* Bootstrap variables custom */
+$grid-gutter-width: 30px;
+$font-size-base: 16px;
+$container-desktop: (1170px + $grid-gutter-width);
+$container-md: $container-desktop;
+
+$container-large-desktop: (1170px + $grid-gutter-width);
+$container-lg: $container-large-desktop;
+
+/* Modal */
+$modal-backdrop-bg: #dadada;
+$close-font-weight: normal;

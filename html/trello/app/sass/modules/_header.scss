@@ -1,0 +1,17 @@
+.header {
+  @extend %text-center;
+  height: 38px;
+  background-color: $main-header-bg-color;
+
+  .logo {
+    @extend %no-margin;
+    padding-top: 5px;
+
+    a {
+      @extend %font-weight-bold;
+      font-style: italic;
+      font-size: 20px;
+      color: $main-header-logo-color;
+    }
+  }
+}
