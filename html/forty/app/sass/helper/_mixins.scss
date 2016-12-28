@@ -62,7 +62,7 @@ $image-path: 'assets/images/';
   @return rgb($r, $g, $b);
 }
 
-@mixin linkState () {
+@mixin linkState() {
   &:hover,
   &:focus,
   &:active,
@@ -72,10 +72,15 @@ $image-path: 'assets/images/';
 }
 
 /* Background sprite */
-@mixin backgroundSprite ($width, $height, $value1, $value2) {
+@mixin backgroundSprite($width, $height, $value1, $value2) {
 
   // FIX ME: Will update unit from px to em
   width: #{$width}px;
   height: #{$height}px;
   background-position: #{$value1}px #{$value2}px;
+}
+
+@mixin lineHeight($height) {
+  height: $height;
+  line-height: $height;
 }
