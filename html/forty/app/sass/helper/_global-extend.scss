@@ -244,13 +244,8 @@
   background-color: $white;
 }
 /* Class extend for font */
-%font-weight-bold {
-  font-weight: bold;
-}
-
-%font-weight-normal {
-  font-weight: normal;
-}
+/* Generate font-weight-x00 class from 100 - 900 */
+@include fontWeightX();
 
 /* Class extend for float */
 %float-left {

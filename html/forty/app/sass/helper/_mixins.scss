@@ -84,3 +84,12 @@ $image-path: 'assets/images/';
   height: $height;
   line-height: $height;
 }
+
+/* Generate font-weight-x00 class from 100 - 900 */
+@mixin fontWeightX() {
+  @for $i from 1 through 9 {
+    %font-weight-#{$i}00 {
+      font-weight: #{$i * 100};
+     }
+  }
+}
