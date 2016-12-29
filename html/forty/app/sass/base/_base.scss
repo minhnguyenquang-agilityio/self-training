@@ -1,6 +1,7 @@
 /* Basic definitions */
 body {
   @extend %cl-default, %source-sans-pro, %bgc-default;
+  font-size: 100%;
 }
 
 h1,
@@ -12,7 +13,30 @@ h6,
 p {
   @extend %no-margin, %no-padding;
   font-weight: normal;
-  font-size: 100%;
+}
+
+h1 {
+  font-size: em($base-font-size, 74);
+}
+
+h2 {
+  font-size: em($base-font-size, 57);
+}
+
+h3 {
+  font-size: em($base-font-size, 40);
+}
+
+h4 {
+  font-size: em($base-font-size, 23);
+}
+
+h5 {
+  font-size: em($base-font-size, 18);
+}
+
+h6 {
+  font-size: em($base-font-size, 14);
 }
 
 a {

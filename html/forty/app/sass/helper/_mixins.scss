@@ -93,3 +93,17 @@ $image-path: 'assets/images/';
      }
   }
 }
+
+@mixin maxContent() {
+  width: max-content;
+  width: -ms-max-content;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+}
+
+@mixin minContent() {
+  width: min-content;
+  width: -ms-min-content;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+}
