@@ -7,53 +7,49 @@ html(lang='en')
       script(src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js")
     link(rel="stylesheet", type="text/css", href="css/main.css")
   body
-    include layouts/modules/header.pug
+    .wrapper
+      include layouts/modules/header.pug
 
-    section.banner-wrapper
-      .container.tile__inner
-        h1.banner__header.tile__title Hi, my name is Forty
-        .banner__content
-          p.banner__text.tile__content A responsive site template designed by html5 up and released under the creative commons.
-          a.banner__get-started.get-started Get started
+      include layouts/modules/banner.pug
 
-    .main
-      section.tiles
-        article.tile__wrapper
-          .tile__inner
-            h3.tile__title Aliquam
-            p.tile__content Ipsum dolor sit amet
-        article.tile__wrapper
-          .tile__inner
-            h3.tile__title Tempus
-            p.tile__content Feugiat amet tempus dolor sit
-        article.tile__wrapper
-          .tile__inner
-            h3.tile__title Magna
-            p.tile__content Lorem etiam nullam
-        article.tile__wrapper
-          .tile__inner
-            h3.tile__title Ipsum
-            p.tile__content Ipsum dolor sit amet
-        article.tile__wrapper
-          .tile__inner
-            h3.tile__title Consequat
-            p.tile__content Ipsum dolor sit amet
-        article.tile__wrapper
-          .tile__inner
-            h3.tile__title Etiam
-            p.tile__content Ipsum dolor sit amet
+      .main
+        section.tiles
+          article.tile__wrapper
+            .tile__inner
+              h3.tile__title Aliquam
+              p.tile__content Ipsum dolor sit amet
+          article.tile__wrapper
+            .tile__inner
+              h3.tile__title Tempus
+              p.tile__content Feugiat amet tempus dolor sit
+          article.tile__wrapper
+            .tile__inner
+              h3.tile__title Magna
+              p.tile__content Lorem etiam nullam
+          article.tile__wrapper
+            .tile__inner
+              h3.tile__title Ipsum
+              p.tile__content Ipsum dolor sit amet
+          article.tile__wrapper
+            .tile__inner
+              h3.tile__title Consequat
+              p.tile__content Ipsum dolor sit amet
+          article.tile__wrapper
+            .tile__inner
+              h3.tile__title Etiam
+              p.tile__content Ipsum dolor sit amet
 
-      section.massa__wrapper
-        .container
-          h2.massa__title Massa libero
-          p.massa__content Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus amet pharetra et feugiat tempus.
-          a.massa__get-started.btn.btn--transparent.btn--next Get started
-          a.massa__get-started.btn.btn--background Get started
+        section.massa__wrapper
+          .container
+            h2.massa__title Massa libero
+            p.massa__content Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus amet pharetra et feugiat tempus.
+            a.massa__get-started.btn.btn--transparent.btn--next Get started
+            a.massa__get-started.btn.btn--background Get started
 
-      section.contact__wrapper
-        .container
-          include layouts/modules/forms.pug
-        .contact-info
+        section.contact__wrapper
+          .container
+            include layouts/modules/forms.pug
+          .contact-info
 
 
 

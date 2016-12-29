@@ -7,7 +7,6 @@ $default-button-fontsize: 16;
   padding-left: em($default-button-fontsize, 22);
   padding-right: em($default-button-fontsize, 22);
   letter-spacing: 4px;
-  margin: em($default-button-fontsize, 5);
 
   &--transparent {
     background-color: transparent;
