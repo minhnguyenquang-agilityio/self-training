@@ -11,13 +11,13 @@
   &__title {
     @extend %font-weight-700;
     border-bottom: 2px solid $white;
+    width: calc(100% + 0.5em);
     padding-bottom: 0.8em;
     margin-bottom: 0.5em;
   }
 
   &__content {
     @extend %text-uppercase, %font-weight-600;;
-    padding-right: 20px;
     letter-spacing: em($base-font-size, 4);
   }
 }
