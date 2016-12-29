@@ -5,7 +5,10 @@
     height: em($base-font-size, 515);
     padding-top: em($base-font-size, 100);
     padding-bottom: em($base-font-size, 40);
-    background-image: url("../assets/images/banner.jpg");
+    background-image: linear-gradient(
+      rgba(42, 47, 74, 0.85),
+      rgba(42, 47, 74, 0.85)
+    ), url("../assets/images/banner.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
