@@ -1,0 +1,34 @@
+section.contact-wrapper
+  .container
+    form.form.contact__form
+      .input__group
+        label.input__title Name
+        input.input__control(type="text", name="name", required)
+      .input__group
+        label.input__title Email
+        input.input__control(type="email", name="email", required)
+      .input__group
+        label.input__title Message
+        textarea.input__control(required)
+      .button-group
+        button.btn.btn--background(type="submit") Send messages
+        button.btn.btn--transparent(type="button") Clear
+
+    //- TODO: use html5 tag for address
+    section.contact__info
+      article.contact__email
+        span.fa.fa-envelope.fa-icon
+        h3.contact__title Email
+        a.contact__data(href="mailto:information@untitled.tld") information@untitled.tld
+      article.contact__phone
+        span.fa.fa-phone.fa-icon
+        h3.contact__title Phone
+        p.contact__data (000) 000-0000 x12387
+      article.contact__address
+        span.fa.fa-home.fa-icon
+        h3.contact__title Address
+        address.contact__data(href="mailto:information@untitled.tld") 1234 Somewhere Road #5432
+          br
+          | Nashville, TN 00000
+          br
+          | United States of America

@@ -5,6 +5,7 @@ $massa-base-font-size: 23;
   &__wrapper {
     padding-top: em($base-font-size, 90);
     padding-bottom: em($base-font-size, 45);
+    background-color: $massa-bg-color;
   }
 
   &__content {

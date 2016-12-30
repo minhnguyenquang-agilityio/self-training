@@ -1,0 +1,65 @@
+.contact {
+  &-wrapper {
+    @extend %overflow-hidden;
+    @include box-shadow(inset 0 -1px 0 0 $contact-border-color);
+  }
+
+  &__form,
+  &__info {
+    @extend %float-left;
+  }
+
+  &__form {
+    width: 60%;
+    padding-top: em($base-font-size, 100);
+
+    .input__group {
+      @extend %box-sizing;
+      margin-bottom: em($base-font-size, 50);
+      padding-right: em($base-font-size, 50);
+
+      &:nth-child(1),
+      &:nth-child(2) {
+        @extend %float-left;
+        width: 50%;
+      }
+    }
+
+    .button-group {
+      .btn {
+        margin-right: em($base-font-size, 20);
+      }
+    }
+  }
+
+  &__info {
+    width: 40%;
+    @include box-shadow(inset 1px 0 0 0 $contact-border-color);
+
+    article {
+      @extend %relative;
+      padding-top: em($base-font-size, 65);
+      padding-right: em($base-font-size, 65);
+      padding-bottom: em($base-font-size, 70);
+      padding-left: em($base-font-size, 145);
+      @include box-shadow(inset 0 -1px 0 0 $contact-border-color);
+
+      .fa-icon {
+        @extend %absolute;
+        top: em($base-font-size, 65);
+        left: em($base-font-size, 70);
+      }
+
+    }
+  }
+
+  &__title {
+    @extend %font-weight-700;
+    margin-bottom: em(40, 31);
+  }
+
+  &__data {
+    font-size: em($base-font-size, 24);
+    color: $white;
+  }
+}
