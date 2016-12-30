@@ -6,6 +6,7 @@ $logo-base-font-size: 18;
   line-height: 75px;
   padding-left: em($logo-base-font-size, 20);
   padding-right: em($logo-base-font-size, 20);
+  z-index: 100;
 
   .logo {
     @extend %color-white, %font-weight-600, %text-uppercase;
