@@ -1,0 +1,14 @@
+$base-icon-font-size: 24;
+
+.fa-icon {
+
+  &:before {
+    @extend %inline-block, %text-center;
+    @include lineHeight(em($base-icon-font-size, 50));
+    @include border-radius(em($base-icon-font-size, 50));
+    font-size: em($base-font-size, $base-icon-font-size);
+    width: em($base-icon-font-size, 50);
+    background-color: $white;
+    color: $primary-color;
+  }
+}
