@@ -1,3 +1,7 @@
+.tiles {
+  @extend %overflow-hidden;
+}
+
 .tile {
 
   &__wrapper {
@@ -44,21 +48,6 @@
   }
 
   &__inner {
-    @include maxContent();
     padding: em($base-font-size, 50) em($base-font-size, 88);
-    z-index: 100;
-  }
-
-  &__title {
-    @extend %font-weight-700;
-    border-bottom: 2px solid $white;
-    width: calc(100% + 0.5em);
-    padding-bottom: 0.8em;
-    margin-bottom: 0.5em;
-  }
-
-  &__content {
-    @extend %text-uppercase, %font-weight-600;;
-    letter-spacing: em($base-font-size, 4);
   }
 }

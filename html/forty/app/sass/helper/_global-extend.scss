@@ -358,3 +358,11 @@
 %transition-ease-out-all {
   transition: all 0.3s ease-out;
 }
+
+.max-content {
+  @include maxContent();
+}
+
+.min-content {
+  @include minContent();
+}

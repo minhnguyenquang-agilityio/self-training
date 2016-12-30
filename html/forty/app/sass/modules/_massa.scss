@@ -1,0 +1,15 @@
+$massa-base-font-size: 23;
+
+.massa {
+
+  &__wrapper {
+    padding-top: em($base-font-size, 90);
+    padding-bottom: em($base-font-size, 45);
+  }
+
+  &__content {
+    font-size: em($base-font-size, $massa-base-font-size);
+    margin-top: em($massa-base-font-size, 10);
+    margin-bottom: em($massa-base-font-size, 45);
+  }
+}

@@ -1,0 +1,15 @@
+.major {
+  z-index: 100;
+
+  &__title {
+    @extend %font-weight-700;
+    border-bottom: 2px solid $white;
+    width: calc(100% + 0.5em);
+    padding-bottom: 0.7em;
+    margin-bottom: 0.5em;
+  }
+
+  &__content {
+    @extend %text-uppercase, %font-weight-600;
+  }
+}
