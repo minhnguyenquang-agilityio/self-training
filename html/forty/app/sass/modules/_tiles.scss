@@ -1,11 +1,52 @@
 .tile {
 
   &__wrapper {
+    @extend %float-left, %overflow-hidden, %relative, %display-flex, %align-items-center;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100% 100%;
+    width: 40%;
+    height: em($base-font-size, 485);
 
+    &:before {
+      @extend %absolute, %full-width, %full-height, %transition-ease-out-all;;
+      content: '';
+      opacity: 0.85;
+    }
+
+    &:hover {
+      @extend %cursor-pointer;
+
+      &:before {
+        @extend %transition-ease-out-all, %cursor-pointer;
+        opacity: 0;
+      }
+    }
+
+    &:nth-child(4n + 2),
+    &:nth-child(4n + 3) {
+      width: 60%;
+    }
+
+    // apply background image and background color for tiles
+    $index: 1;
+    @each $item in $tiles-bg-colors-list {
+      &:nth-child(#{$index}) {
+        background-image: url("../assets/images/#{nth($item, 2)}");
+
+        &:before {
+          background-color: #{nth($item, 1)};
+        }
+      }
+
+      $index: $index + 1;
+    }
   }
 
   &__inner {
     @include maxContent();
+    padding: em($base-font-size, 50) em($base-font-size, 88);
+    z-index: 100;
   }
 
   &__title {
