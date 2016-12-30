@@ -17,6 +17,7 @@ $form-base-font-size: 18;
       font-size: em($form-base-font-size, 18);
       background-color: $form-input-bg-color;
       padding: em($form-base-font-size, 20);
+      max-width: 100%;
 
       &:focus {
         @include box-shadow(inset 0 0 0 2px $form-input-hover-bg-color);
@@ -27,6 +28,7 @@ $form-base-font-size: 18;
 
   textarea.input__control {
     height: em($form-base-font-size, 255);
+    max-height: em($form-base-font-size, 255);
   }
 
   .button {
