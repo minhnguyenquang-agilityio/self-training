@@ -13,7 +13,7 @@ $form-base-font-size: 18;
     }
 
     &__control {
-      @extend %no-border, %color-white, %full-width;
+      @extend %no-border, %color-white, %full-width, %box-sizing;
       font-size: em($form-base-font-size, 18);
       background-color: $form-input-bg-color;
       padding: em($form-base-font-size, 20);

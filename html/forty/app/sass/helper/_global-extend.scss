@@ -269,6 +269,10 @@
   box-shadow: none;
 }
 
+%box-sizing {
+  @include box-sizing(border-box);
+}
+
 /* Cursor */
 %cursor-pointer {
   cursor: pointer;
