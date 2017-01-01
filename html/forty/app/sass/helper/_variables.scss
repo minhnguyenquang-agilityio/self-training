@@ -9,7 +9,7 @@ $source-sans-pro: 'Source Sans Pro';
 /* Font size */
 $base-font-size: 16;
 
-/* Main color */
+/* color names */
 
 $primary-color: #242943;
 $secondary-color: #2a2f4a;
@@ -18,19 +18,15 @@ $white: #ffffff;
 $red: #ff0000;
 $green: #008000;
 $anakiwa: #9bf1ff;
+$martinique: #353955;
 
-/* Base colors */
+/* element colors */
 $main-text-color: $white;
 $main-bg-color: $primary-color;
 $header-bg-color: $secondary-color;
 $logo-bg-color: $white;
 $logo-text-color: $primary-color;
 $btn-hover-bg-color: $anakiwa;
-$massa-bg-color: $secondary-color;
-$form-input-bg-color: $secondary-color;
-$form-input-hover-bg-color: #9bf1ff;
-$contact-border-color: #353955;
-$contact-link-hover-color: $anakiwa;
 $tiles-bg-colors-list: (
   (#6fc3df, "pic01.jpg"),
   (#8d82c4, "pic02.jpg"),
@@ -39,3 +35,10 @@ $tiles-bg-colors-list: (
   (#8ea9e8, "pic05.jpg"),
   (#87c5a4, "pic06.jpg")
 );
+$massa-bg-color: $secondary-color;
+$form-input-bg-color: $secondary-color;
+$form-input-hover-bg-color: $anakiwa;
+$contact-border-color: $martinique;
+$contact-link-hover-color: $anakiwa;
+$footer-link-color: $anakiwa;
+$footer-main-text-color: #374860;
