@@ -17,6 +17,7 @@ $black: #000000;
 $white: #ffffff;
 $red: #ff0000;
 $green: #008000;
+$anakiwa: #9bf1ff;
 
 /* Base colors */
 $main-text-color: $white;
@@ -24,11 +25,12 @@ $main-bg-color: $primary-color;
 $header-bg-color: $secondary-color;
 $logo-bg-color: $white;
 $logo-text-color: $primary-color;
-$btn-hover-bg-color: #9bf1ff;
+$btn-hover-bg-color: $anakiwa;
 $massa-bg-color: $secondary-color;
 $form-input-bg-color: $secondary-color;
 $form-input-hover-bg-color: #9bf1ff;
 $contact-border-color: #353955;
+$contact-link-hover-color: $anakiwa;
 $tiles-bg-colors-list: (
   (#6fc3df, "pic01.jpg"),
   (#8d82c4, "pic02.jpg"),

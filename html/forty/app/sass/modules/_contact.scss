@@ -62,4 +62,13 @@
     font-size: em($base-font-size, 24);
     color: $white;
   }
+
+  a#{&}__data {
+    border-bottom: 1px dotted $white;
+
+    &:hover {
+      color: $contact-link-hover-color;
+      border-bottom: 0px;
+    }
+  }
 }
