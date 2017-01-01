@@ -1,8 +1,10 @@
-.wrapper {
-  @extend %relative;
-
-  .container {
-    width: em($base-font-size, 1475);
-    margin: 0 auto;
-  }
+.wrapper
+{
+    @extend %relative;
+    .container
+    {
+        width: calc(100% - 12em);
+        max-width: 90em;
+        margin: 0 auto;
+    }
 }

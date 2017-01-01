@@ -7,8 +7,8 @@
   &__wrapper {
     @extend %float-left, %overflow-hidden, %relative, %display-flex, %align-items-center;
     background-repeat: no-repeat;
-    background-position: center center;
-    background-size: 100% 100%;
+    background-position: center;
+    background-size: cover;
     width: 40%;
     height: em($base-font-size, 485);
 
