@@ -7,12 +7,13 @@ section.contact.contact-wrapper
       .input__group
         label.input__title Email
         input.input__control(type="email", name="email", required)
+      .clear-both
       .input__group
         label.input__title Message
         textarea.input__control(required)
       .button-group
-        button.btn.btn--background(type="submit") Send messages
-        button.btn.btn--transparent(type="button") Clear
+        input.btn.btn--background(type="submit" value="Send message")
+        input.btn.btn--transparent(type="reset" value="Clear")
 
     //- TODO: use html5 tag for address
     section.contact__info

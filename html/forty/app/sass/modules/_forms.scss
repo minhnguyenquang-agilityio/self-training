@@ -1,23 +1,20 @@
-$form-base-font-size: 18;
-
 .form {
   .input {
     &__group {
-      font-size: em($base-font-size, $form-base-font-size);
+      font-size: rem($base-font-size, $form-base-font-size);
       width: 100%;
     }
 
     &__title {
-      @extend %block, %font-weight-600, %text-uppercase;
+      @extend %block ,.text-upper-wide;
+      font-size: em($form-base-font-size, 12);
       margin-bottom: em($form-base-font-size, 15);
     }
 
     &__control {
       @extend %no-border, %color-white, %full-width, %box-sizing;
-      font-size: em($form-base-font-size, 18);
       background-color: $form-input-bg-color;
-      padding: em($form-base-font-size, 20);
-      max-width: 100%;
+      padding: em($form-base-font-size, 12);
 
       &:focus {
         @include box-shadow(inset 0 0 0 2px $form-input-hover-bg-color);
@@ -33,7 +30,6 @@ $form-base-font-size: 18;
 
   .button {
     &__group {
-      font-size: em($form-base-font-size, 16);
     }
   }
 }

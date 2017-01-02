@@ -13,14 +13,19 @@
   line-height: 1.5em;
 }
 
+.clear-both {
+  clear: both;
+}
+
 .wrapper
 {
-    @extend %relative;
-    .container
-    {
-        width: calc(100% - 3em);
-        max-width: 90em;
-        margin: 0 auto;
-        z-index: 100;
-    }
+  @extend %relative;
+  .container
+  {
+    @extend %overflow-hidden;
+    width: calc(100% - 3em);
+    max-width: 90em;
+    margin: 0 auto;
+    z-index: 100;
+  }
 }

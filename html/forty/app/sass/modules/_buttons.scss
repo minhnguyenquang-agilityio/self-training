@@ -1,12 +1,9 @@
-$default-button-fontsize: 12;
-
 .btn {
-  font-size: rem($base-font-size, $default-button-fontsize);
-  @extend %inline-block, %relative, %font-weight-600, %text-uppercase, %transition-ease-out-all, %no-border, %color-white;
-  @include lineHeight(em($default-button-fontsize, 41));
-  padding-left: em($default-button-fontsize, 22);
-  padding-right: em($default-button-fontsize, 22);
-  letter-spacing: 4px;
+  font-size: rem($base-font-size, $button-base-font-size);
+  @extend %inline-block, %relative, .text-upper-wide, %transition-ease-out-all, %no-border, %color-white;
+  @include lineHeight(em($button-base-font-size, 41));
+  padding-left: em($button-base-font-size, 20);
+  padding-right: em($button-base-font-size, 20);
 
   &--transparent {
     background-color: transparent;
@@ -34,7 +31,7 @@ $default-button-fontsize: 12;
   }
 
   &--next {
-    padding-right: em($default-button-fontsize, 50);
+    padding-right: em($button-base-font-size, 50);
 
     &::before {
       @extend %inline-block;
@@ -52,8 +49,8 @@ $default-button-fontsize: 12;
       content: '';
       background-repeat: no-repeat;
       background-position: center right;
-      width: em($default-button-fontsize, 36);
-      right: em($default-button-fontsize, 10);
+      width: em($button-base-font-size, 36);
+      right: em($button-base-font-size, 10);
     }
   }
 
