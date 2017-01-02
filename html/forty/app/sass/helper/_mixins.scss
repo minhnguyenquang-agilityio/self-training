@@ -23,6 +23,10 @@ $image-path: 'assets/images/';
   @return $em-values;
 }
 
+@function rem($parent, $value) {
+  @return #{$value/$parent}rem;
+}
+
 /* Mixin for font face */
 @mixin font-face($font-name) {
   @font-face {

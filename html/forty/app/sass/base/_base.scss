@@ -3,10 +3,6 @@
    License: none (public domain)
 */
 
-body {
-  @extend %cl-default, %source-sans-pro, %bgc-default;
-}
-
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -24,9 +20,13 @@ time, mark, audio, video {
   padding: 0;
   border: 0;
   font-size: 100%;
-  font: inherit;
   vertical-align: baseline;
 }
+
+body {
+  @extend %cl-default, %source-sans-pro, %bgc-default;
+}
+
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
@@ -53,27 +53,15 @@ table {
 }
 
 h1 {
-  font-size: em($base-font-size, 74);
+  font-size: rem($base-font-size, 30);
 }
 
 h2 {
-  font-size: em($base-font-size, 40);
+  font-size: em($base-font-size, 26);
 }
 
 h3 {
-  font-size: em($base-font-size, 30);
-}
-
-h4 {
-  font-size: em($base-font-size, 23);
-}
-
-h5 {
-  font-size: em($base-font-size, 18);
-}
-
-h6 {
-  font-size: em($base-font-size, 14);
+  font-size: rem($base-font-size, 22);
 }
 
 a {

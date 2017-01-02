@@ -1,4 +1,4 @@
-$logo-base-font-size: 18;
+$logo-base-font-size: 12;
 
 .header {
   @extend %absolute;
@@ -16,10 +16,7 @@ $logo-base-font-size: 18;
     strong {
       color: $logo-text-color;
       background-color: $white;
-      padding-top: em($logo-base-font-size, 2);
-      padding-bottom: em($logo-base-font-size, 2);
-      padding-left: em($logo-base-font-size, 5);
-      padding-right: em($logo-base-font-size, 2);
+      padding: em($logo-base-font-size, 2, 2, 2, 5);
       margin-right: em($logo-base-font-size, 5);
     }
   }

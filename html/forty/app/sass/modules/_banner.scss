@@ -1,10 +1,12 @@
+$banner-text-base-fs: 10;
+
 .banner {
   &-wrapper {
     @extend %display-flex, %relative;
     @include align-items(center);
-    height: em($base-font-size, 515);
-    padding-top: em($base-font-size, 100);
-    padding-bottom: em($base-font-size, 40);
+    // height: em($base-font-size, 515);
+    padding-top: em($base-font-size, 120);
+    padding-bottom: em($base-font-size, 60);
     background-image: url("../assets/images/banner.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -22,9 +24,8 @@
 
   &__text {
     @extend %float-left;
-    width: 40%;
-    padding-top: em($base-font-size, 6);
-    padding-bottom: em($base-font-size, 6);
+    font-size: em($base-font-size, $banner-text-base-fs);
+    padding-bottom: em($banner-text-base-fs, 20);
   }
 
   &__get-started {

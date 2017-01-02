@@ -1,9 +1,9 @@
-$default-button-fontsize: 16;
+$default-button-fontsize: 12;
 
 .btn {
+  font-size: rem($base-font-size, $default-button-fontsize);
   @extend %inline-block, %relative, %font-weight-600, %text-uppercase, %transition-ease-out-all, %no-border, %color-white;
-  @include lineHeight(em($default-button-fontsize, 52));
-  font-size: em($default-button-fontsize, 16);
+  @include lineHeight(em($default-button-fontsize, 41));
   padding-left: em($default-button-fontsize, 22);
   padding-right: em($default-button-fontsize, 22);
   letter-spacing: 4px;
@@ -34,7 +34,7 @@ $default-button-fontsize: 16;
   }
 
   &--next {
-    padding-right: em($default-button-fontsize, 58);
+    padding-right: em($default-button-fontsize, 50);
 
     &::before {
       @extend %inline-block;
