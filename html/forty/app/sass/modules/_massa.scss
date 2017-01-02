@@ -1,16 +1,17 @@
-$massa-base-font-size: 23;
+$massa-base-font-size: 14;
 
 .massa {
 
   &__wrapper {
-    padding-top: em($base-font-size, 90);
-    padding-bottom: em($base-font-size, 45);
+    padding-top: em($base-font-size, 50);
+    padding-bottom: em($base-font-size, 30);
     background-color: $massa-bg-color;
   }
 
   &__content {
     font-size: em($base-font-size, $massa-base-font-size);
+    line-height: em($massa-base-font-size, 22);
     margin-top: em($massa-base-font-size, 10);
-    margin-bottom: em($massa-base-font-size, 45);
+    margin-bottom: em($massa-base-font-size, 30);
   }
 }
