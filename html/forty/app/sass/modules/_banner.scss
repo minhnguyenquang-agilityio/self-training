@@ -24,7 +24,6 @@ $banner-text-base-fs: 10;
 
   &__text {
     @extend %float-left;
-    font-size: em($base-font-size, $banner-text-base-fs);
     padding-bottom: em($banner-text-base-fs, 20);
   }
 

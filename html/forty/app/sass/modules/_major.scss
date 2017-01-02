@@ -1,14 +1,11 @@
 .major {
-  margin-bottom: em($base-font-size, 30);
+  z-index: 100;
 
   &__title {
     @extend %font-weight-700;
     border-bottom: 2px solid $white;
     width: calc(100% + 0.5em);
     padding-bottom: 0.7em;
-  }
-
-  &__content {
-    @extend %text-uppercase, %font-weight-600;
+    margin-bottom: 0.6em;
   }
 }
