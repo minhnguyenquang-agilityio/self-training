@@ -1,40 +1,32 @@
-$footer-base-font-size: 18;
-
 .footer {
-  padding-top: em($base-font-size, 100);
-  padding-bottom: em($base-font-size, 100);
-
-  .container {
-  }
+  padding-top: em($base-font-size, 40);
+  padding-bottom: em($base-font-size, 40);
 
   .socials,
   .copyright {
     line-height: initial;
-
-    & > li {
-
-    }
   }
 
   .socials {
-    margin-bottom: em($base-font-size, 50);
+    margin-bottom: em($base-font-size, 25);
     & > li {
       @extend %inline-block;
-      margin-right: em($base-font-size, 30);
+      margin-right: em($base-font-size, 10);
     }
   }
 
   .copyright {
     & > li {
-      @extend %inline-block;
+      @extend %block;
       font-size: em($base-font-size, $footer-base-font-size);
       color: $footer-main-text-color;
+      margin-bottom: em($base-font-size, 5);
 
-      &:not(:last-child) {
-        border-right: 1px solid $footer-main-text-color;
-        padding-right: em($footer-base-font-size, 20);
-        margin-right: em($footer-base-font-size, 20);
-      }
+      // &:not(:last-child) {
+        // border-right: 1px solid $footer-main-text-color;
+        // padding-right: em($footer-base-font-size, 20);
+        // margin-right: em($footer-base-font-size, 20);
+      // }
 
       > a {
         @extend %transition-ease-out-all;
