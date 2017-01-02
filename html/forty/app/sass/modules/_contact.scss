@@ -1,11 +1,19 @@
 .contact {
   &-wrapper {
-    @extend %overflow-hidden;
+    @extend %overflow-hidden, %relative;
+
+    &:after {
+      @extend %block, %absolute, %bottom-0;
+      content: '';
+      border-bottom: 1px solid $contact-border-color;
+      width: calc(100vw + 3em);
+      margin-left: -3em;
+    }
   }
 
   &__form,
   &__info {
-    @extend %float-left;
+    @extend %float-left, %full-width;
   }
 
   &__form {
@@ -29,20 +37,24 @@
   }
 
   &__info {
-    @include box-shadow(inset 1px 0 0 0 $contact-border-color);
-
     article {
-      @extend %relative;
-      padding-top: em($base-font-size, 65);
-      padding-right: em($base-font-size, 65);
-      padding-bottom: em($base-font-size, 70);
-      padding-left: em($base-font-size, 145);
-      @include box-shadow(inset 0 -1px 0 0 $contact-border-color);
+      @extend %relative, %box-sizing;
+      padding-top: em($base-font-size, 45);
+      padding-left: em($base-font-size, 40);
+      padding-bottom: em($base-font-size, 45);
 
       .fa-icon {
         @extend %absolute;
-        top: em($base-font-size, 65);
-        left: em($base-font-size, 70);
+        top: em($base-font-size, 45);
+        left: em($base-font-size, 0);
+      }
+
+      &:before {
+        @extend %block, %absolute, %top-0;
+        content: '';
+        border-top: 1px solid $contact-border-color;
+        width: calc(100vw + 3em);
+        margin-left: -3em;
       }
 
     }
@@ -50,12 +62,15 @@
 
   &__title {
     @extend %font-weight-700;
+    font-size: em($base-font-size, 18);
     margin-bottom: em(40, 31);
   }
 
   &__data {
-    font-size: em($base-font-size, 24);
+    @extend %text-style-normal;
+    font-size: em($base-font-size, 14);
     color: $white;
+    line-height: 1.5em;
   }
 
   a#{&}__data {
