@@ -38,7 +38,7 @@
 
   &__info {
     article {
-      @extend %relative, %box-sizing;
+      @extend %relative;
       padding-top: em($base-font-size, 45);
       padding-left: em($base-font-size, 40);
       padding-bottom: em($base-font-size, 45);

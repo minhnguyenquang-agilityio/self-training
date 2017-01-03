@@ -62,10 +62,11 @@
         font-size: rem($base-font-size, $sm-form-base-font-size);
       }
     }
-    .contact {
-      &__title {
-        font-size: em($base-font-size, $sm-contact-info-title-font-size);
-      }
+  }
+
+  .contact {
+    &__title {
+      font-size: em($base-font-size, $sm-contact-info-title-font-size);
     }
   }
 

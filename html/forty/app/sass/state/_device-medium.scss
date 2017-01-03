@@ -1,0 +1,36 @@
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+  .tile {
+    &__wrapper {
+      width: 40%;
+
+      &:nth-child(4n-2),
+      &:nth-child(4n-1) {
+        width: 60%;
+      }
+    }
+  }
+
+  .contact {
+    &__form {
+      width: 60%;
+      padding-right: em($form-base-font-size, 40);
+    }
+
+    &__info {
+      width: 40%;
+      border-left: 1px solid $contact-border-color;
+      padding-left: em($base-font-size, 40);
+
+      article {
+        padding-top: em($base-font-size, 55);
+        padding-bottom: em($base-font-size, 55);
+
+        &:before {
+          // FIXME - update border
+          border: 0;
+        }
+      }
+    }
+  }
+}

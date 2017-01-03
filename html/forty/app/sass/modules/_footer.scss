@@ -22,12 +22,6 @@
       color: $footer-main-text-color;
       margin-bottom: em($base-font-size, 5);
 
-      // &:not(:last-child) {
-        // border-right: 1px solid $footer-main-text-color;
-        // padding-right: em($footer-base-font-size, 20);
-        // margin-right: em($footer-base-font-size, 20);
-      // }
-
       > a {
         @extend %transition-ease-out-all;
         border-bottom: 1px dotted $footer-main-text-color;
