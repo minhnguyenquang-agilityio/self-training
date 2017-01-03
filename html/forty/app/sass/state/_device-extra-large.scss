@@ -1,0 +1,89 @@
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1600px) {
+  h1 {
+    font-size: rem($base-font-size, 61);
+  }
+
+  h3 {
+    font-size: rem($base-font-size, 33);
+  }
+
+  p {
+    font-size: rem($base-font-size, 13);
+  }
+
+  .form {
+    .input {
+      &__group {
+        font-size: rem($base-font-size, $xl-form-base-font-size);
+      }
+    }
+  }
+
+  .btn {
+    font-size: rem($base-font-size, $xl-button-base-font-size);
+  }
+
+  .fa-icon {
+    &:before {
+      font-size: rem($base-font-size, $xl-icon-base-font-size);
+    }
+  }
+
+  .header {
+    .logo {
+      font-size: em($base-font-size, $xl-logo-base-font-size);
+    }
+  }
+
+
+  .tile {
+    &__wrapper {
+      height: em($base-font-size, 520);
+    }
+
+    &__inner {
+      padding-left: em($base-font-size, 90);
+      padding-right: em($base-font-size, 90);
+    }
+  }
+
+  .massa {
+    &__content {
+      font-size: em($base-font-size, $xl-massa-base-font-size);
+    }
+  }
+
+  .contact {
+    &__info {
+      padding-left: em($base-font-size, 70);
+
+      article {
+        padding-top: em($base-font-size, 70);
+        padding-bottom: em($base-font-size, 70);
+        padding-left: em($base-font-size, 70);
+
+        .fa-icon {
+          top: em($base-font-size, 65);
+          left: em($base-font-size, 0);
+        }
+      }
+    }
+    &__title {
+      font-size: em($base-font-size, $xl-contact-info-title-font-size);
+    }
+
+    &__data {
+      font-size: em($base-font-size, $xl-contact-info-data-font-size);
+    }
+  }
+
+  .footer {
+    .copyright {
+      & > li {
+        font-size: em($base-font-size, $xl-footer-base-font-size);
+      }
+    }
+  }
+
+}

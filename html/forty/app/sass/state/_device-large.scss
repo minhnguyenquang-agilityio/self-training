@@ -57,7 +57,14 @@
   .contact {
     &__info {
       article {
+        padding-top: em($base-font-size, 60);
+        padding-bottom: em($base-font-size, 60);
         padding-left: em($base-font-size, 60);
+
+        .fa-icon {
+          top: em($base-font-size, 55);
+          left: em($base-font-size, 0);
+        }
       }
     }
     &__title {
