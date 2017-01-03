@@ -1,6 +1,7 @@
 .form {
   .input {
     &__group {
+      @extend %box-sizing;
       font-size: rem($base-font-size, $form-base-font-size);
       width: 100%;
     }
