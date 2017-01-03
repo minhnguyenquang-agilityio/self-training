@@ -3,9 +3,8 @@ html(lang='en')
   head
     title Forty
     meta(name="viewport" content="width=device-width, initial-scale=1")
-    //if lte IE 8
-      script(src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js")
     link(rel="stylesheet", type="text/css", href="css/main.css")
+    <!--[if IE]><link rel="stylesheet" type="text/css" href="css/ie.css"><![endif]-->
   body
     .wrapper
       include layouts/modules/header.pug
@@ -23,6 +22,4 @@ html(lang='en')
     script.
       window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')
     script(src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js")
-    //- // if lte IE 8
-    //-   script(src="assets/script/respond.min.js")
     //- script(src="assets/script/main.js")

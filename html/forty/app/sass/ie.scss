@@ -1,0 +1,8 @@
+.no-flexbox {
+  display: table;
+
+  &__child-middle {
+    display: table-cell;
+    vertical-align: middle;
+  }
+}
