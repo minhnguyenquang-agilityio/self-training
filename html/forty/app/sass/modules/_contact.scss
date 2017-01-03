@@ -62,13 +62,13 @@
 
   &__title {
     @extend %font-weight-700;
-    font-size: em($base-font-size, 18);
-    margin-bottom: em(40, 31);
+    font-size: em($base-font-size, $contact-info-title-font-size);
+    margin-bottom: em($contact-info-title-font-size, 14);
   }
 
   &__data {
     @extend %text-style-normal;
-    font-size: em($base-font-size, 14);
+    font-size: em($base-font-size, $contact-info-data-font-size);
     color: $white;
     line-height: 1.5em;
   }

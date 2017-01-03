@@ -2,9 +2,8 @@ $banner-text-base-fs: 10;
 
 .banner {
   &-wrapper {
-    @extend %display-flex, %relative;
+    @extend %display-flex, %relative, %full-width;
     @include align-items(center);
-    // height: em($base-font-size, 515);
     padding-top: em($base-font-size, 120);
     padding-bottom: em($base-font-size, 60);
     background-image: url("../assets/images/banner.jpg");
@@ -12,7 +11,6 @@ $banner-text-base-fs: 10;
     background-size: cover;
     background-attachment: fixed;
     background-position: center center;
-    width: 100%;
 
     &:before {
       @extend %absolute, %full-width, %full-height, %top-0;
@@ -23,11 +21,7 @@ $banner-text-base-fs: 10;
   }
 
   &__text {
-    @extend %float-left;
+    @extend %float-left, %full-width;
     padding-bottom: em($banner-text-base-fs, 20);
-  }
-
-  &__get-started {
-
   }
 }

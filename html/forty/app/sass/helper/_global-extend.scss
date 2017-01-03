@@ -357,13 +357,6 @@
   @include align-items(center);
 }
 
-/* For doctor item in list doctors */
-%list-doctors__item {
-  @extend %float-left;
-  padding-left: em($base-font-size, 5);
-  padding-right: em($base-font-size, 5);
-}
-
 %transition-ease-out-all {
   transition: all 0.3s ease-out;
 }
