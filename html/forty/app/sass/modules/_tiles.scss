@@ -13,7 +13,7 @@
     width: 100%;
 
     &:before {
-      @extend %absolute, %full-width, %full-height, %transition-ease-out-all;;
+      @extend %absolute, %full-width, %full-height, %transition-ease-out-all, %top-0;
       content: '';
       opacity: 0.85;
     }
@@ -43,6 +43,7 @@
   }
 
   &__inner {
+    @extend %relative;
     z-index: 100;
     padding-left: em($base-font-size, 24);
     padding-right: em($base-font-size, 24);

@@ -17,15 +17,19 @@
   clear: both;
 }
 
+.unhoverable {
+  @extend %no-pointer-events;
+}
+
 .wrapper
 {
   @extend %relative;
   .container
   {
-    @extend %overflow-hidden;
+    @extend %overflow-hidden, %relative;
     width: calc(100% - 3em);
     max-width: 90em;
     margin: 0 auto;
-    z-index: 100;
+    z-index: 10;
   }
 }

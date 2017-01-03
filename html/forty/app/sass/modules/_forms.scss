@@ -26,6 +26,7 @@
   textarea.input__control {
     height: em($form-base-font-size, 180);
     max-height: em($form-base-font-size, 180);
+    overflow: auto;
   }
 
   .button {

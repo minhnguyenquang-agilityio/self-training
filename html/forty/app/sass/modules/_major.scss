@@ -1,5 +1,6 @@
 .major {
-  z-index: 100;
+  @extend %relative;
+  z-index: 10;
 
   &__title {
     @extend %font-weight-700;
