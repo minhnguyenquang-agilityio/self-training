@@ -9,4 +9,16 @@
     padding-bottom: 0.7em;
     margin-bottom: 0.6em;
   }
+
+  body.is-ie .tiles & {
+    &__title {
+      max-width: 12em;
+    }
+  }
+
+  body.is-ie .massa & {
+    &__title {
+      max-width: 10em;
+    }
+  }
 }

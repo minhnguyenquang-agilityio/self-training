@@ -1,9 +1,5 @@
 ( function( $ ) {
-    // Init Skrollr
-    var s = skrollr.init({
-        render: function(data) {
-            //Debugging - Log the current scroll position.
-            //console.log(data.curTop);
-        }
-    });
+  if (navigator.appVersion.indexOf("Trident") !== -1) {
+    $('body').addClass('is-ie');
+  }
 } )( jQuery );
