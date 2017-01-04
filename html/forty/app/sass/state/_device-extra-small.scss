@@ -1,5 +1,18 @@
 /* Extra Small Devices, Phones */
 @media only screen and (min-width : 480px) {
+  .menu {
+    &__inner {
+      width: em($base-font-size, 288);
+    }
+
+    &__link,
+    &__action {
+      a.menu__item {
+        font-size: em($base-font-size, $xs-menu-base-font-size);
+      }
+    }
+  }
+
   .tile {
     &__wrapper {
       height: em($base-font-size, 256);

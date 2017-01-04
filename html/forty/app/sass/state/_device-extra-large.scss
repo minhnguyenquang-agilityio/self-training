@@ -16,6 +16,19 @@
     @include lineHeight(em($base-font-size, 74));
   }
 
+  .menu {
+    &__inner {
+      width: em($base-font-size, 408);
+    }
+
+    &__link,
+    &__action {
+      a.menu__item {
+        font-size: em($base-font-size, $xl-menu-base-font-size);
+      }
+    }
+  }
+
   .form {
     .input {
       &__group {

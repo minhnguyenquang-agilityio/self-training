@@ -1,0 +1,45 @@
+.menu {
+  @extend %fixed, %full-width, %full-height, %top-0, %display-flex, %align-items-center;
+  line-height: 100%;
+  background-color: $menu-bg-color;
+  z-index: 500;
+
+  &__inner {
+    width: em($base-font-size, 246);
+    margin: 0 auto;
+  }
+
+  &__link,
+  &__action {
+    a.menu__item {
+      @extend %block, %full-width, %text-center;
+      font-size: em($base-font-size, $menu-base-font-size);
+    }
+  }
+
+  &__link {
+    margin-bottom: em($base-font-size, 15);
+
+    & > li {
+      a.menu__item {
+        padding-top: em($menu-base-font-size, 14);
+        padding-bottom: em($menu-base-font-size, 14);
+
+        @include linkState() {
+          @extend %cursor-pointer;
+          color: $menu-item-hover-color;
+        }
+      }
+
+      &:not(:last-child) {
+        border-bottom: 1px solid $menu-border-bottom-color;
+      }
+    }
+  }
+
+  &__action {
+    & > li {
+      margin-bottom: em($menu-base-font-size, 15);
+    }
+  }
+}
