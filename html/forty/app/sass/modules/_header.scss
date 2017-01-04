@@ -1,10 +1,15 @@
+@include keyframes('reveal-header') {
+  0% { top: -4em; opacity: 0;}
+  100% { top: 0; opacity: 1;}
+}
+
 .header {
-  @extend %absolute;
-  height: 75px;
-  line-height: 75px;
-  padding-left: em($logo-base-font-size, 20);
-  padding-right: em($logo-base-font-size, 20);
-  z-index: 10;
+  @extend %fixed, %full-width;
+  @include lineHeight(em($base-font-size, 40));
+  padding-left: em($logo-base-font-size, 12);
+  padding-right: em($logo-base-font-size, 12);
+  background-color: $header-bg-color;
+  z-index: 100;
 
   .logo {
     @extend %color-white, %font-weight-600, %text-uppercase;
@@ -19,10 +24,26 @@
       margin-right: em($logo-base-font-size, 5);
     }
 
+    span {
+      @extend %hide;
+    }
+
     body.loaded & {
       opacity: 1;
       transition: opacity 2.5s ease;
       transition-delay: 0.75s;
     }
+  }
+
+  &.reveal {
+    @extend %no-animation;
+    animation: reveal-header 0.5s ease;
+  }
+
+  &.alt {
+    @extend %absolute, %no-animation;
+    transition: opacity 0.5s ease, top 0.5s ease;
+    transition-delay: 0.75s;
+    background-color: transparent;
   }
 }

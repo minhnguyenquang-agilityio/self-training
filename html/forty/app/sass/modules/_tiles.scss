@@ -44,7 +44,7 @@
 
   &__inner {
     @extend %relative;
-    z-index: 100;
+    z-index: 10;
     padding-left: em($base-font-size, 24);
     padding-right: em($base-font-size, 24);
   }
