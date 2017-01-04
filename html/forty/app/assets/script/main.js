@@ -1,4 +1,4 @@
-( function( $ ) {
+(function($) {
 
   $(function() {
     var $window = $(window);
@@ -34,6 +34,8 @@
           $header.addClass('reveal');
         }
       });
+
+      $banner.scrolly({bgParallax: true});
     });
 
     if (navigator.appVersion.indexOf("Trident") !== -1) {
@@ -41,4 +43,4 @@
     }
 
   });
-} )( jQuery );
+})(jQuery);
