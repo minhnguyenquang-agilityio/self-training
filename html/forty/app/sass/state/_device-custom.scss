@@ -13,8 +13,13 @@
   }
 
   .header {
+    @include lineHeight(em($base-font-size, 44));
     .logo {
       font-size: em($base-font-size, $xs-logo-base-font-size);
+
+      span {
+        display: inline-block;
+      }
     }
   }
 

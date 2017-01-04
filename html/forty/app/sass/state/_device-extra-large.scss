@@ -12,6 +12,10 @@
     font-size: rem($base-font-size, 13);
   }
 
+  .header {
+    @include lineHeight(em($base-font-size, 74));
+  }
+
   .form {
     .input {
       &__group {

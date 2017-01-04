@@ -8,6 +8,10 @@
     font-size: rem($base-font-size, 28);
   }
 
+  .header {
+    @include lineHeight(em($base-font-size, 52));
+  }
+
   .wrapper
   {
     .container
