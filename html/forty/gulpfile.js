@@ -12,9 +12,10 @@ gulp.task('serve', ['sass', 'pug', 'assets'], function() {
   });
 
   gulp.watch("app/sass/**/*.scss", ['sass']);
-    // gulp.watch("app/template/*.pug").on('change', browserSync.reload);
-    gulp.watch("app/**/*.pug", ['pug']);
-  });
+  // gulp.watch("app/template/*.pug").on('change', browserSync.reload);
+  gulp.watch("app/**/*.pug", ['pug']);
+  gulp.watch("app/assets/**/*", ['assets']);
+});
 
 // Compile sass into CSS & auto-inject into browsers
 gulp.task('sass', function() {
