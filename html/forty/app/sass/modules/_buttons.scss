@@ -4,6 +4,7 @@
   @include lineHeight(em($button-base-font-size, 41));
   padding-left: em($button-base-font-size, 20);
   padding-right: em($button-base-font-size, 20);
+  margin-bottom: em($button-base-font-size, 10);
 
   &--transparent {
     background-color: transparent;
