@@ -10,12 +10,19 @@
     @extend %color-white, %font-weight-600, %text-uppercase;
     font-size: em($base-font-size, $logo-base-font-size);
     letter-spacing: em($logo-base-font-size, 5);
+    opacity: 0;
 
     strong {
       color: $logo-text-color;
       background-color: $white;
       padding: em($logo-base-font-size, 2, 2, 2, 5);
       margin-right: em($logo-base-font-size, 5);
+    }
+
+    body.loaded & {
+      opacity: 1;
+      transition: opacity 2.5s ease;
+      transition-delay: 0.75s;
     }
   }
 }
