@@ -1,8 +1,9 @@
 .menu {
-  @extend %fixed, %full-width, %full-height, %top-0, %display-flex, %align-items-center;
+  @extend %fixed, %full-width, %full-height, %top-0, %hide, %align-items-center;
   line-height: 100%;
   background-color: $menu-bg-color;
   z-index: 500;
+  opacity: 0.9;
 
   &__inner {
     overflow-y: auto;
@@ -77,5 +78,9 @@
       }
     }
 
+  }
+
+  body.is-menu-visible & {
+    @extend %display-flex;
   }
 }

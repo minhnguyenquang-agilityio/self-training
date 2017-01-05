@@ -5,6 +5,8 @@
     var $body = $('body');
     var $banner = $('#banner');
     var $header = $('#header');
+    var $menuButton = $('#menu-btn');
+    var $menu = $('#menu');
 
     $window.on('load pageshow', function() {
       window.setTimeout(function() {
@@ -36,6 +38,14 @@
       });
 
       $banner.scrolly({bgParallax: true});
+
+      $menuButton.on('click', function() {
+        $body.addClass('is-menu-visible');
+      });
+
+      $menu.on('click', function() {
+        $body.removeClass('is-menu-visible');
+      });
     });
 
     if (navigator.appVersion.indexOf("Trident") !== -1) {

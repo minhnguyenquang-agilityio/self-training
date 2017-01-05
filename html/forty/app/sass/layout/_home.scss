@@ -1,0 +1,5 @@
+.wrapper {
+  body.is-menu-visible & {
+    filter: blur(0.5em);
+  }
+}
