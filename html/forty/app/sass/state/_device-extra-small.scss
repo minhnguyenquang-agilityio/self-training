@@ -13,6 +13,22 @@
     }
   }
 
+  .header {
+    .logo {
+      span {
+        display: inline-block;
+      }
+    }
+    nav {
+      a.menu-btn {
+        font-size: em($base-font-size, $xs-menu-base-font-size);
+        padding-right: em($xs-menu-base-font-size, 80);
+        padding-left: em($xs-menu-base-font-size, 10);
+        text-indent: 0;
+      }
+    }
+  }
+
   .tile {
     &__wrapper {
       height: em($base-font-size, 256);

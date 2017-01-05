@@ -51,8 +51,14 @@
     .logo {
       font-size: em($base-font-size, $lg-logo-base-font-size);
     }
-  }
 
+    nav {
+      a.menu-btn {
+        font-size: em($base-font-size, $lg-menu-base-font-size);
+        text-indent: 0;
+      }
+    }
+  }
 
   .tile {
     &__wrapper {

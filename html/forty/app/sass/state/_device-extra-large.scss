@@ -14,6 +14,13 @@
 
   .header {
     @include lineHeight(em($base-font-size, 74));
+
+    nav {
+      a.menu-btn {
+        font-size: em($base-font-size, $xl-menu-base-font-size);
+      }
+    }
+
   }
 
   .menu {
