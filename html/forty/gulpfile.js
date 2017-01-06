@@ -1,8 +1,16 @@
+// global.isProducton = process.env.ENV === 'prod';
+
 var gulp         = require('gulp');
 var browserSync  = require('browser-sync').create();
 var sass         = require('gulp-ruby-sass');
 var pug          = require('gulp-pug');
 var autoprefixer = require('gulp-autoprefixer');
+var uglifycss    = require('gulp-uglifycss');
+var cssmin       = require('gulp-cssmin');
+var rename       = require('gulp-rename');
+var gulpif       = require('gulp-if');
+
+var condition = process.env.ENV === 'prod';
 
 // Static Server + watching scss/html files
 gulp.task('serve', ['sass', 'pug', 'assets'], function() {
@@ -24,6 +32,7 @@ gulp.task('sass', function() {
     browsers: ['last 3 versions'],
     cascade: false
   }))
+  .pipe(gulpif(condition, cssmin()))
   .pipe(gulp.dest("dist/css"))
   .pipe(browserSync.stream());
 });
