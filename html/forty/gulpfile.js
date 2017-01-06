@@ -12,11 +12,12 @@ var gulpif       = require('gulp-if');
 var concat       = require('gulp-concat');
 var uglify       = require('gulp-uglify');
 var minifyHTML   = require('gulp-minify-html');
+var clean        = require('gulp-clean');
 
 var condition = process.env.ENV === 'prod';
 
 // Static Server + watching scss/html files
-gulp.task('serve', ['sass', 'pug', 'assets', 'script'], function() {
+gulp.task('serve', ['clean', 'sass', 'pug', 'assets', 'script'], function() {
 
   browserSync.init({
     server: "./dist",
@@ -27,6 +28,11 @@ gulp.task('serve', ['sass', 'pug', 'assets', 'script'], function() {
   gulp.watch("app/sass/**/*.scss", ['sass']);
   gulp.watch("app/scripts/**/*.js", ['script']);
   gulp.watch("app/assets/**/*", ['assets']);
+});
+
+gulp.task('clean', function() {
+  return gulp.src('dist', {force: true, read: false})
+    .pipe(clean());
 });
 
 // Compile sass into CSS & auto-inject into browsers
@@ -71,4 +77,4 @@ gulp.task('assets', function() {
 });
 
 gulp.task('default', ['serve']);
-gulp.task('release', ['sass', 'pug', 'assets', 'script']);
+gulp.task('release', ['clean', 'sass', 'pug', 'assets', 'script']);
