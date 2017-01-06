@@ -3,7 +3,7 @@ html(lang='en')
   head
     title Forty
     meta(name="viewport" content="width=device-width, initial-scale=1, user-scalable=no")
-    link(rel="stylesheet", type="text/css", href="css/main.css")
+    //styles
     <!--[if lte IE 9]><link rel="stylesheet" type="text/css" href="css/ie.css"><![endif]-->
   body
     include layouts/modules/menu.pug
@@ -18,11 +18,4 @@ html(lang='en')
       include layouts/modules/contact.pug
       include layouts/modules/footer.pug
 
-    //- script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js")
-    script(src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js")
-    script.
-      window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')
-    script(src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js")
-    script(src="assets/script/jquery.scrollex.min.js")
-    script(src="assets/script/jquery.scrolly.min.js")
-    script(src="assets/script/main.js")
+    //scripts
