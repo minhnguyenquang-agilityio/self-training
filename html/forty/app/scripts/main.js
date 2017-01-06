@@ -1,6 +1,6 @@
 (function($) {
 
-  $(function() {
+  $(document).ready(function() {
     var $window = $(window);
     var $body = $('body');
     var $banner = $('#banner');
@@ -8,49 +8,47 @@
     var $menuButton = $('#menu-btn');
     var $menu = $('#menu');
 
-    $window.on('load pageshow', function() {
-      window.setTimeout(function() {
-        $body.addClass('loaded');
-      }, 100);
-    });
-
     $window.on('resize', function() {
       $window.trigger('scroll');
     });
 
-    $window.on('load', function() {
-      $banner.scrollex({
-        bottom: $header.height() + 10,
-        initialize: function() {
-          $header.addClass('alt');
-        },
-        terminate: function() {
-          $header.removeClass('alt');
-        },
-        enter: function() {
-          $header.addClass('alt');
-          $header.removeClass('reveal');
-        },
-        leave: function() {
-          $header.removeClass('alt');
-          $header.addClass('reveal');
-        }
-      });
+    window.setTimeout(function() {
+      $body.addClass('loaded');
+    }, 100);
 
-      $banner.scrolly({bgParallax: true});
+    $banner.scrollex({
+      bottom: $header.height() + 10,
+      initialize: function() {
+        $header.addClass('alt');
+      },
+      terminate: function() {
+        $header.removeClass('alt');
+      },
+      enter: function() {
+        $header.addClass('alt');
+        $header.removeClass('reveal');
+      },
+      leave: function() {
+        $header.removeClass('alt');
+        $header.addClass('reveal');
+      }
+    });
 
-      $menuButton.on('click', function() {
-        $body.addClass('is-menu-visible');
-      });
+    $banner.scrolly({bgParallax: true});
 
-      $menu.on('click', function() {
-        $body.removeClass('is-menu-visible');
-      });
+    $menuButton.on('click', function() {
+      $body.addClass('is-menu-visible');
+    });
+
+    $menu.on('click', function() {
+      $body.removeClass('is-menu-visible');
     });
 
     if (navigator.appVersion.indexOf("Trident") !== -1) {
+      console.log('On ie');
       $body.addClass('is-ie');
     }
-
   });
+
+
 })(jQuery);

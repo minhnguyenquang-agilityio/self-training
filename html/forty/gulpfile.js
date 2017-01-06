@@ -11,6 +11,7 @@ var replace      = require('gulp-replace');
 var gulpif       = require('gulp-if');
 var concat       = require('gulp-concat');
 var uglify       = require('gulp-uglify');
+var minifyHTML   = require('gulp-minify-html');
 
 var condition = process.env.ENV === 'prod';
 
@@ -22,8 +23,9 @@ gulp.task('serve', ['sass', 'pug', 'assets', 'script'], function() {
     port: 3000
   });
 
-  gulp.watch("app/sass/**/*.scss", ['sass']);
   gulp.watch("app/**/*.pug", ['pug']);
+  gulp.watch("app/sass/**/*.scss", ['sass']);
+  gulp.watch("app/scripts/**/*.js", ['script']);
   gulp.watch("app/assets/**/*", ['assets']);
 });
 
@@ -32,10 +34,10 @@ gulp.task('sass', function() {
   return sass("app/sass/*.scss", {sourcemap: true, compass: true})
   .pipe(autoprefixer({
     browsers: ['last 3 versions'],
-    cascade: false
+    cascade: true
   }))
-  .pipe(gulpif(condition, cssmin()))
   .pipe(gulpif(condition, rename(config.filenames.release.style), rename(config.filenames.build.style)))
+  .pipe(gulpif(condition, cssmin()))
   .pipe(gulp.dest("dist/"))
   .pipe(browserSync.stream());
 });
@@ -51,7 +53,8 @@ gulp.task('pug', function() {
   .pipe(gulpif(condition,
     replace('<!--scripts-->', '<script src="' + config.filenames.release.script + '"></script>'),
     replace('<!--scripts-->', '<script src="' + config.filenames.build.script + '"></script>')))
-  .pipe(gulp.dest('dist'))
+  .pipe(minifyHTML({empty: true, spare: true, quotes: true}))
+  .pipe(gulp.dest('dist/'))
   .pipe(browserSync.stream());
 });
 
@@ -68,5 +71,4 @@ gulp.task('assets', function() {
 });
 
 gulp.task('default', ['serve']);
-
-gulp.task('build', ['sass', 'pug', 'assets', 'script']);
+gulp.task('release', ['sass', 'pug', 'assets', 'script']);

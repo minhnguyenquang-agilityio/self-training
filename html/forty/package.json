@@ -5,7 +5,8 @@
   "main": "gulpfile.js",
   "scripts": {
     "dev": "ENV=dev gulp",
-    "build": "ENV=prod gulp"
+    "dev-min": "ENV=prod gulp",
+    "release": "ENV=prod gulp release"
   },
   "author": "",
   "license": "ISC",
@@ -16,6 +17,7 @@
     "gulp-concat": "^2.6.1",
     "gulp-cssmin": "^0.1.7",
     "gulp-if": "^2.0.2",
+    "gulp-minify-html": "^1.0.6",
     "gulp-pug": "^3.0.4",
     "gulp-rename": "^1.2.2",
     "gulp-replace": "^0.5.4",
