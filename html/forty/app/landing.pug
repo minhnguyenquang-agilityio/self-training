@@ -1,0 +1,33 @@
+doctype html
+html(lang='en')
+  head
+    title Forty
+    meta(name="viewport" content="width=device-width, initial-scale=1, user-scalable=no")
+    //styles
+    <!--[if lte IE 9]><link rel="stylesheet" type="text/css" href="css/ie.css"><![endif]-->
+  body
+    include layouts/modules/menu.pug
+    .wrapper
+      include layouts/modules/header.pug
+      section#banner.banner-wrapper(data-velocity="-.3")
+        .container
+          .banner__inner
+            .major
+              h1.banner__header.major__title Landing
+            .banner__content
+              p.text-upper-wide.banner__text.major__content Lorem ipsum dolor sit amet nullam consequat sed veroeros. tempus adipiscing nulla.
+
+      .main
+        section.massa.massa__wrapper
+          .container
+            .major.max-content
+              h3.massa__title.major__title Sed amet aliquam
+            p.massa__content Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna. Maecenas massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna.
+
+        include layouts/modules/spotlights.pug
+        include layouts/modules/massa.pug
+
+      include layouts/modules/contact.pug
+      include layouts/modules/footer.pug
+
+    //scripts

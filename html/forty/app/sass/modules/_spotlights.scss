@@ -1,0 +1,28 @@
+.spotlights {
+
+}
+
+.spotlight {
+
+  &__wrapper {
+    @extend %overflow-hidden;
+    height: em($base-font-size, 500);
+  }
+
+  &__image,
+  &__content {
+    @extend %float-left;
+  }
+
+  &__image {
+    width: 30%;
+  }
+
+  &__content {
+    @extend %display-flex, %align-items-center;
+    height: inherit;
+    width: 70%;
+    padding-left: em($base-font-size, 70);
+    padding-right: em($base-font-size, 70);
+  }
+}
