@@ -4,9 +4,16 @@
     font-size: rem($base-font-size, $xl-h3-font-size);
   }
 
-  p {
-    font-size: rem($base-font-size, 13);
+  .text {
+    &--normal {
+      font-size: rem($base-font-size, $xl-text-normal-base-font-size);
+    }
+
+    &--upper-wide {
+      font-size: rem($base-font-size, $xl-text-upper-wide-base-font-size);
+    }
   }
+
 
   .header {
     @include lineHeight(em($base-font-size, 74));
@@ -72,21 +79,6 @@
     &__wrapper {
       height: em($base-font-size, 490);
     }
-
-    &__content {
-      .massa {
-        &__content {
-          font-size: em($base-font-size, $xl-spotlight-content-base-font-size);
-        }
-      }
-    }
-  }
-
-
-  .massa {
-    &__content {
-      font-size: em($base-font-size, $xl-massa-base-font-size);
-    }
   }
 
   .contact {
@@ -103,10 +95,6 @@
           left: em($base-font-size, 0);
         }
       }
-    }
-
-    &__data {
-      font-size: em($base-font-size, $xl-contact-info-data-font-size);
     }
   }
 

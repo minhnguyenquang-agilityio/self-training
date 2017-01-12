@@ -12,10 +12,6 @@
     font-size: rem($base-font-size, $xs-h3-font-size);
   }
 
-  p {
-    font-size: rem($base-font-size, 11);
-  }
-
   .header {
     @include lineHeight(em($base-font-size, 44));
     .logo {

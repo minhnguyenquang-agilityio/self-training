@@ -12,9 +12,16 @@
     font-size: rem($base-font-size, $lg-h3-font-size);
   }
 
-  p {
-    font-size: rem($base-font-size, 13);
+  .text {
+    &--normal {
+      font-size: rem($base-font-size, $lg-text-normal-base-font-size);
+    }
+
+    &--upper-wide {
+      font-size: rem($base-font-size, $lg-text-upper-wide-base-font-size);
+    }
   }
+
 
   .header {
     @include lineHeight(em($base-font-size, 61));
@@ -86,18 +93,6 @@
 
     &__content {
       width: 70%;
-
-      .massa {
-        &__content {
-          font-size: em($base-font-size, $lg-spotlight-content-base-font-size);
-        }
-      }
-    }
-  }
-
-  .massa {
-    &__content {
-      font-size: em($base-font-size, $lg-massa-base-font-size);
     }
   }
 
@@ -113,10 +108,6 @@
           left: em($base-font-size, 0);
         }
       }
-    }
-
-    &__data {
-      font-size: em($base-font-size, $lg-contact-info-data-font-size);
     }
   }
 

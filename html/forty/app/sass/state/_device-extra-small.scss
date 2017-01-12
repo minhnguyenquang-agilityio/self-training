@@ -1,5 +1,15 @@
 /* Extra Small Devices, Phones */
 @media only screen and (min-width : 480px) {
+  .text {
+    &--normal {
+      font-size: rem($base-font-size, $xs-text-normal-base-font-size);
+    }
+
+    &--upper-wide {
+      font-size: rem($base-font-size, $xs-text-upper-wide-base-font-size);
+    }
+  }
+
   .menu {
     &__inner {
       width: em($base-font-size, 288);
@@ -36,24 +46,6 @@
     }
   }
 
-  .spotlight {
-    &__content {
-
-      .massa {
-        &__content {
-          font-size: em($base-font-size, $xs-spotlight-content-base-font-size);
-        }
-      }
-    }
-  }
-
-  .massa {
-    &__content {
-      font-size: em($base-font-size, $xs-massa-base-font-size);
-    }
-  }
-
-
   .contact {
     &__form {
       .input__group {
@@ -74,10 +66,6 @@
           margin-right: em($form-base-font-size, 20);
         }
       }
-    }
-
-    &__data {
-      font-size: em($base-font-size, $xs-contact-info-data-font-size);
     }
   }
 

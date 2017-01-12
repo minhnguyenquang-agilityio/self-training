@@ -6,7 +6,7 @@
     }
 
     &__title {
-      @extend %block ,.text-upper-wide;
+      @extend %block ,%text-upper-wide;
       font-size: em($form-base-font-size, 12);
       margin-bottom: em($form-base-font-size, 15);
     }

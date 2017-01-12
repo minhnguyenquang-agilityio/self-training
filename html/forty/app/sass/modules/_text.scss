@@ -1,0 +1,10 @@
+.text {
+  &--normal {
+    font-size: rem($base-font-size, $text-normal-base-font-size);
+  }
+
+  &--upper-wide {
+    @extend %text-upper-wide;
+    font-size: rem($base-font-size, $text-upper-wide-base-font-size);
+  }
+}

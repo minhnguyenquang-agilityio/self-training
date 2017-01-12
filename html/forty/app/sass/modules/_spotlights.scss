@@ -33,10 +33,9 @@
 
     .massa {
       &__content {
-        font-size: em($base-font-size, $spotlight-content-base-font-size);
-        line-height: em($spotlight-content-base-font-size, 22);
-        margin-top: em($spotlight-content-base-font-size, 10);
-        margin-bottom: em($spotlight-content-base-font-size, 30);
+        line-height: em($text-normal-base-font-size, 22);
+        margin-top: em($text-normal-base-font-size, 10);
+        margin-bottom: em($text-normal-base-font-size, 30);
       }
     }
   }

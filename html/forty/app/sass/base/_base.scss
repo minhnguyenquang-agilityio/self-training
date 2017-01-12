@@ -66,10 +66,6 @@ h3 {
   font-size: rem($base-font-size, $h3-font-size);
 }
 
-p {
-  font-size: rem($base-font-size, 10);
-}
-
 a {
   @extend %no-text-decoration;
 
