@@ -1,11 +1,15 @@
 /* Large Devices, Wide Screens */
 @media only screen and (min-width : 1200px) {
   h1 {
-    font-size: rem($base-font-size, 61);
+    font-size: rem($base-font-size, $lg-h1-font-size);
+  }
+
+  h2 {
+    font-size: rem($base-font-size, $lg-h2-font-size);
   }
 
   h3 {
-    font-size: rem($base-font-size, 33);
+    font-size: rem($base-font-size, $lg-h3-font-size);
   }
 
   p {
@@ -82,11 +86,6 @@
 
     &__content {
       width: 70%;
-      .major {
-        &__title {
-          font-size: em($base-font-size, $lg-spotlight-title-base-font-size);
-        }
-      }
 
       .massa {
         &__content {
@@ -114,9 +113,6 @@
           left: em($base-font-size, 0);
         }
       }
-    }
-    &__title {
-      font-size: em($base-font-size, $lg-contact-info-title-font-size);
     }
 
     &__data {

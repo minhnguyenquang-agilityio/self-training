@@ -55,15 +55,15 @@ table {
 }
 
 h1 {
-  font-size: rem($base-font-size, 30);
+  font-size: rem($base-font-size, $h1-font-size);
 }
 
 h2 {
-  font-size: em($base-font-size, 26);
+  font-size: em($base-font-size, $h2-font-size);
 }
 
 h3 {
-  font-size: rem($base-font-size, 22);
+  font-size: rem($base-font-size, $h3-font-size);
 }
 
 p {

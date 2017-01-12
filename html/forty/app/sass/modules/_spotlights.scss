@@ -31,12 +31,6 @@
     padding-top: em($base-font-size, 40);
     padding-bottom: em($base-font-size, 40);
 
-    .major {
-      &__title {
-        font-size: em($base-font-size, $spotlight-title-base-font-size);
-      }
-    }
-
     .massa {
       &__content {
         font-size: em($base-font-size, $spotlight-content-base-font-size);

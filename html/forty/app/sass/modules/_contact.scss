@@ -63,8 +63,7 @@
 
   &__title {
     @extend %font-weight-700;
-    font-size: em($base-font-size, $contact-info-title-font-size);
-    margin-bottom: em($contact-info-title-font-size, 14);
+    margin-bottom: em($h3-font-size, 14);
   }
 
   &__data {

@@ -1,11 +1,11 @@
 /* Small Devices, Tablets */
 @media only screen and (min-width : 768px) {
   h1 {
-    font-size: rem($base-font-size, 52);
+    font-size: rem($base-font-size, $sm-h1-font-size);
   }
 
-  h3 {
-    font-size: rem($base-font-size, 28);
+  h2 {
+    font-size: rem($base-font-size, $sm-h2-font-size);
   }
 
   .header {
@@ -53,12 +53,6 @@
     &__content {
       padding-top: em($base-font-size, 70);
       padding-bottom: em($base-font-size, 70);
-
-      .major {
-        &__title {
-          font-size: em($base-font-size, $sm-spotlight-title-base-font-size);
-        }
-      }
     }
   }
 
@@ -78,12 +72,6 @@
       &__group {
         font-size: rem($base-font-size, $sm-form-base-font-size);
       }
-    }
-  }
-
-  .contact {
-    &__title {
-      font-size: em($base-font-size, $sm-contact-info-title-font-size);
     }
   }
 

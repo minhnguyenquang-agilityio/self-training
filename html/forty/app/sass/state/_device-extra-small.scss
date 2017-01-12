@@ -38,11 +38,6 @@
 
   .spotlight {
     &__content {
-      .major {
-        &__title {
-          font-size: em($base-font-size, $xs-spotlight-title-base-font-size);
-        }
-      }
 
       .massa {
         &__content {
@@ -79,10 +74,6 @@
           margin-right: em($form-base-font-size, 20);
         }
       }
-    }
-
-    &__title {
-      font-size: em($base-font-size, $xs-contact-info-title-font-size);
     }
 
     &__data {
