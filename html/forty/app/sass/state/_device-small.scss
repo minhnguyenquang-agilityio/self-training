@@ -56,6 +56,12 @@
     }
   }
 
+  .generic {
+    &.massa__wrapper {
+      padding-top: em($base-font-size, 120);
+    }
+  }
+
   .massa {
     &__wrapper {
       padding-top: em($base-font-size, 70);

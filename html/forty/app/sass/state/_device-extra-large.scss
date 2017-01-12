@@ -81,6 +81,12 @@
     }
   }
 
+  .generic {
+    &.massa__wrapper {
+      padding-top: em($base-font-size, 150);
+    }
+  }
+
   .contact {
     &__info {
       padding-left: em($base-font-size, 70);

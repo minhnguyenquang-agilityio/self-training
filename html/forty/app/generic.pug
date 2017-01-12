@@ -1,0 +1,17 @@
+doctype html
+html(lang='en')
+  head
+    title Forty
+    meta(name="viewport" content="width=device-width, initial-scale=1, user-scalable=no")
+    //styles
+    <!--[if lte IE 9]><link rel="stylesheet" type="text/css" href="css/ie.css"><![endif]-->
+  body
+    include layouts/modules/menu.pug
+    .wrapper
+      include layouts/modules/header.pug
+      include layouts/modules/generic.pug
+
+      include layouts/modules/contact.pug
+      include layouts/modules/footer.pug
+
+    //scripts

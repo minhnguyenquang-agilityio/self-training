@@ -1,0 +1,15 @@
+.generic {
+  padding-top: em($base-font-size, 90);
+  padding-bottom: em($base-font-size, 30);
+  background-color: $generic-bg-color;
+  border-bottom: 1px solid $contact-border-color;
+
+  &__image {
+    img {
+      width: 100%;
+      height: auto;
+      margin-top: em($base-font-size, 30);
+      margin-bottom: em($base-font-size, 30);
+    }
+  }
+}
