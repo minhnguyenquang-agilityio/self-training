@@ -49,6 +49,19 @@
     }
   }
 
+  .spotlight {
+    &__content {
+      padding-top: em($base-font-size, 70);
+      padding-bottom: em($base-font-size, 70);
+
+      .major {
+        &__title {
+          font-size: em($base-font-size, $sm-spotlight-title-base-font-size);
+        }
+      }
+    }
+  }
+
   .massa {
     &__wrapper {
       padding-top: em($base-font-size, 70);

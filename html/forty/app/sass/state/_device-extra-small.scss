@@ -36,6 +36,22 @@
     }
   }
 
+  .spotlight {
+    &__content {
+      .major {
+        &__title {
+          font-size: em($base-font-size, $xs-spotlight-title-base-font-size);
+        }
+      }
+
+      .massa {
+        &__content {
+          font-size: em($base-font-size, $xs-spotlight-content-base-font-size);
+        }
+      }
+    }
+  }
+
   .massa {
     &__content {
       font-size: em($base-font-size, $xs-massa-base-font-size);

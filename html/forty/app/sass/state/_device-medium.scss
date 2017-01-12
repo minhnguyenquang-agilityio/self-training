@@ -11,6 +11,35 @@
     }
   }
 
+  .spotlight {
+    &__wrapper {
+      height: em($base-font-size, 405);
+
+      &.reverse-block {
+        .spotlight__image {
+          float: right;
+        }
+      }
+    }
+
+    &__image,
+    &__content {
+      float: left;
+      height: inherit;
+    }
+
+    &__image {
+      width: 45%;
+    }
+
+    &__content {
+      display: flex;
+      padding: 0;
+      align-items: center;
+      width: 55%;
+    }
+  }
+
   .contact {
     &__form {
       width: 60%;

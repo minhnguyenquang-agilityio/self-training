@@ -71,6 +71,31 @@
     }
   }
 
+  .spotlight {
+    &__wrapper {
+      height: em($base-font-size, 480);
+    }
+
+    &__image {
+      width: 30%;
+    }
+
+    &__content {
+      width: 70%;
+      .major {
+        &__title {
+          font-size: em($base-font-size, $lg-spotlight-title-base-font-size);
+        }
+      }
+
+      .massa {
+        &__content {
+          font-size: em($base-font-size, $lg-spotlight-content-base-font-size);
+        }
+      }
+    }
+  }
+
   .massa {
     &__content {
       font-size: em($base-font-size, $lg-massa-base-font-size);

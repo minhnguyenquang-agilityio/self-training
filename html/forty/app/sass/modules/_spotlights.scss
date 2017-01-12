@@ -6,23 +6,44 @@
 
   &__wrapper {
     @extend %overflow-hidden;
-    height: em($base-font-size, 500);
+
+    &:nth-child(2n+1) {
+      background-color: $spotlight-odd-bg-color;
+    }
+    &:nth-child(2n) {
+      background-color: $spotlight-even-bg-color;
+    }
   }
 
   &__image,
   &__content {
-    @extend %float-left;
+    @extend %full-width;
   }
 
   &__image {
-    width: 30%;
+    img {
+      @extend %block, %full-width;
+      height: auto;
+    }
   }
 
   &__content {
-    @extend %display-flex, %align-items-center;
-    height: inherit;
-    width: 70%;
-    padding-left: em($base-font-size, 70);
-    padding-right: em($base-font-size, 70);
+    padding-top: em($base-font-size, 40);
+    padding-bottom: em($base-font-size, 40);
+
+    .major {
+      &__title {
+        font-size: em($base-font-size, $spotlight-title-base-font-size);
+      }
+    }
+
+    .massa {
+      &__content {
+        font-size: em($base-font-size, $spotlight-content-base-font-size);
+        line-height: em($spotlight-content-base-font-size, 22);
+        margin-top: em($spotlight-content-base-font-size, 10);
+        margin-bottom: em($spotlight-content-base-font-size, 30);
+      }
+    }
   }
 }
