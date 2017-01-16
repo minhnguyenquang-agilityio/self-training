@@ -1,16 +1,19 @@
 /* Large Devices, Wide Screens */
 @media only screen and (min-width : 1600px) {
-  h1 {
-    font-size: rem($base-font-size, 61);
-  }
-
   h3 {
-    font-size: rem($base-font-size, 33);
+    font-size: rem($base-font-size, $xl-h3-font-size);
   }
 
-  p {
-    font-size: rem($base-font-size, 13);
+  .text {
+    &--normal {
+      font-size: rem($base-font-size, $xl-text-normal-base-font-size);
+    }
+
+    &--upper-wide {
+      font-size: rem($base-font-size, $xl-text-upper-wide-base-font-size);
+    }
   }
+
 
   .header {
     @include lineHeight(em($base-font-size, 74));
@@ -72,9 +75,15 @@
     }
   }
 
-  .massa {
-    &__content {
-      font-size: em($base-font-size, $xl-massa-base-font-size);
+  .spotlight {
+    &__wrapper {
+      height: em($base-font-size, 490);
+    }
+  }
+
+  .generic {
+    &.massa__wrapper {
+      padding-top: em($base-font-size, 150);
     }
   }
 
@@ -92,13 +101,6 @@
           left: em($base-font-size, 0);
         }
       }
-    }
-    &__title {
-      font-size: em($base-font-size, $xl-contact-info-title-font-size);
-    }
-
-    &__data {
-      font-size: em($base-font-size, $xl-contact-info-data-font-size);
     }
   }
 

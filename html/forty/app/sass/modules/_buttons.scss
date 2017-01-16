@@ -1,6 +1,6 @@
 .btn {
   font-size: rem($base-font-size, $button-base-font-size);
-  @extend %inline-block, %relative, .text-upper-wide, %transition-ease-out-all, %no-border, %color-white;
+  @extend %inline-block, %relative, %text-upper-wide, %transition-ease-out-all, %no-border, %color-white;
   @include lineHeight(em($button-base-font-size, 41));
   padding-left: em($button-base-font-size, 20);
   padding-right: em($button-base-font-size, 20);

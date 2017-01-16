@@ -1,11 +1,11 @@
 /* Small Devices, Tablets */
 @media only screen and (min-width : 768px) {
   h1 {
-    font-size: rem($base-font-size, 52);
+    font-size: rem($base-font-size, $sm-h1-font-size);
   }
 
-  h3 {
-    font-size: rem($base-font-size, 28);
+  h2 {
+    font-size: rem($base-font-size, $sm-h2-font-size);
   }
 
   .header {
@@ -49,6 +49,19 @@
     }
   }
 
+  .spotlight {
+    &__content {
+      padding-top: em($base-font-size, 70);
+      padding-bottom: em($base-font-size, 70);
+    }
+  }
+
+  .generic {
+    &.massa__wrapper {
+      padding-top: em($base-font-size, 120);
+    }
+  }
+
   .massa {
     &__wrapper {
       padding-top: em($base-font-size, 70);
@@ -56,7 +69,7 @@
     }
 
     &__content {
-      margin-top: em($massa-base-font-size, 30);
+      margin-top: em($text-normal-base-font-size, 30);
     }
   }
 
@@ -65,12 +78,6 @@
       &__group {
         font-size: rem($base-font-size, $sm-form-base-font-size);
       }
-    }
-  }
-
-  .contact {
-    &__title {
-      font-size: em($base-font-size, $sm-contact-info-title-font-size);
     }
   }
 

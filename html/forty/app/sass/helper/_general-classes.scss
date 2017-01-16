@@ -6,13 +6,6 @@
   @include minContent();
 }
 
-.text-upper-wide {
-  @extend %font-weight-600;
-  text-transform: uppercase;
-  letter-spacing: 0.25em;
-  line-height: 1.5em;
-}
-
 .clear-both {
   clear: both;
 }

@@ -11,7 +11,7 @@
 
 /* Class extend font-family */
 %source-sans-pro {
-  font-family: $source-sans-pro;
+  font-family: $source-sans-pro, Arial;
 }
 
 /* Class extend for text style */
@@ -363,4 +363,12 @@
 
 %no-animation {
   animation: none;
+}
+
+%text-upper-wide {
+  font-size: rem($base-font-size, 10);
+  @extend %font-weight-600;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  line-height: 1.5em;
 }

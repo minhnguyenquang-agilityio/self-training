@@ -25,6 +25,7 @@
 
     & > li {
       a.menu__item {
+        @extend %cl-white;
         padding-top: em($menu-base-font-size, 14);
         padding-bottom: em($menu-base-font-size, 14);
 
