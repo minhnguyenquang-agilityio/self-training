@@ -13,11 +13,12 @@ var concat       = require('gulp-concat');
 var uglify       = require('gulp-uglify');
 var minifyHTML   = require('gulp-minify-html');
 var clean        = require('gulp-clean');
+var imagemin     = require('gulp-imagemin');
 
 var condition = process.env.ENV === 'prod';
 
 // Static Server + watching scss/html files
-gulp.task('serve', ['clean', 'sass', 'pug', 'assets', 'script'], function() {
+gulp.task('serve', ['clean', 'sass', 'pug', 'assets', 'script', 'imagemin'], function() {
 
   browserSync.init({
     server: "./dist",
@@ -72,9 +73,15 @@ gulp.task('script', function() {
 });
 
 gulp.task('assets', function() {
-  return gulp.src('app/assets/**/*.*')
-    .pipe(gulp.dest('dist/assets'));
+  return gulp.src('app/assets/fonts/*.*')
+    .pipe(gulp.dest('dist/assets/fonts/'));
 });
 
+gulp.task('imagemin', () =>
+  gulp.src('app/assets/images/*.*')
+    .pipe(imagemin({ progressive: true }))
+    .pipe(gulp.dest('dist/assets/images/'))
+);
+
 gulp.task('default', ['serve']);
-gulp.task('release', ['clean', 'sass', 'pug', 'assets', 'script']);
+gulp.task('release', ['clean', 'sass', 'pug', 'assets', 'script', 'imagemin']);
