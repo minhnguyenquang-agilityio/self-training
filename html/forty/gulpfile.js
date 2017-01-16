@@ -14,6 +14,7 @@ var uglify       = require('gulp-uglify');
 var minifyHTML   = require('gulp-minify-html');
 var clean        = require('gulp-clean');
 var imagemin     = require('gulp-imagemin');
+var runSequence  = require('run-sequence');
 
 var condition = process.env.ENV === 'prod';
 
@@ -83,5 +84,10 @@ gulp.task('imagemin', () =>
     .pipe(gulp.dest('dist/assets/images/'))
 );
 
-gulp.task('default', ['serve']);
-gulp.task('release', ['clean', 'sass', 'pug', 'assets', 'script', 'imagemin']);
+gulp.task('default', function() {
+  runSequence('clean', 'serve');
+});
+
+gulp.task('release', function() {
+  runSequence('clean', ['sass', 'pug', 'assets', 'script', 'imagemin']);
+});
