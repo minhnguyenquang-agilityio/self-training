@@ -1,0 +1,21 @@
+{
+  "name": "trello",
+  "version": "0.0.0",
+  "homepage": "https://github.com/minhnguyenquang/self-training",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.1.1",
+    "jquery.scrollex": "^0.2.1",
+    "jquery-scrolly": "^0.0.1"
+  },
+  "devDependencies": {
+    "font-awesome": "^4.7.0"
+  }
+}
