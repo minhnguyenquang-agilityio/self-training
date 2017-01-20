@@ -59,11 +59,15 @@ h1 {
 }
 
 h2 {
-  font-size: em($base-font-size, $h2-font-size);
+  font-size: rem($base-font-size, $h2-font-size);
 }
 
 h3 {
   font-size: rem($base-font-size, $h3-font-size);
+}
+
+p, a, input {
+  font-size: $text-base-font-size;
 }
 
 a {

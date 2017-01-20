@@ -1,0 +1,18 @@
+.text {
+  &--upper-special {
+    @extend %text-uppercase, %font-weight-600;
+    letter-spacing: 0.2em;
+  }
+
+  &--link {
+    border: 1px dotted $main-text-color;
+  }
+
+  &__title {
+    margin-bottom: 0.5em;
+  }
+
+  &__content {
+    opacity: 0.55;
+  }
+}

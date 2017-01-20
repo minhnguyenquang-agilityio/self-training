@@ -1,19 +1,18 @@
 /* Font-family */
-$source-sans-pro: 'Source Sans Pro';
+$base-font: 'Arial';
+$base-font-size: 16;
 
 /* Base font size */
-$h1-font-size: 30;
-$h2-font-size: 22;
-$h3-font-size: 18;
-$base-font-size: 16;
-$form-base-font-size: 14;
-$icon-base-font-size: 16;
-$logo-base-font-size: 12;
-$button-base-font-size: 11;
-$menu-base-font-size: 12;
-$text-normal-base-font-size: 14;
-$text-upper-wide-base-font-size: 10;
-$footer-base-font-size: 12;
+$h1-font-size: 60.5;
+$h2-font-size: 38.5;
+$h3-font-size: 24;
+$text-base-font-size: 22;
+$banner-text-base-font-size: 27.5;
+$button-base-font-size: 13;
+$normal-icon-base-font-size: 27.5;
+$social-icon-base-font-size: 22;
+$menu-base-font-size: 13;
+$form-base-font-size: 22;
 
 /* Extra small font size */
 $xs-h1-font-size: 32;
@@ -60,42 +59,24 @@ $xl-footer-base-font-size: 18;
 
 /* color names */
 
-$primary-color: #242943;
-$secondary-color: #2a2f4a;
+$primary-color: #5e42a6;
 $black: #000000;
 $white: #ffffff;
 $red: #ff0000;
 $green: #008000;
-$anakiwa: #9bf1ff;
-$martinique: #353955;
-$oxford-blue: #363a56;
-$ebony-clay: #222842;
+$blue-violet: #765eb3;
+$mulberry: #b74e91;
+$minsk: #493382;
+$port-gore: #312450;
 
 /* element colors */
-$main-text-color: $white;
+$main-text-color: rgba(255, 255, 255, 0.55);
 $main-bg-color: $primary-color;
-$header-bg-color: $secondary-color;
-$logo-bg-color: $white;
-$logo-text-color: $primary-color;
-$menu-bg-color: $ebony-clay;
-$menu-border-bottom-color: $oxford-blue;
-$menu-item-hover-color: $anakiwa;
-$btn-hover-bg-color: $anakiwa;
-$tiles-bg-colors-list: (
-  (#6fc3df, "pic01.jpg"),
-  (#8d82c4, "pic02.jpg"),
-  (#ec8d81, "pic03.jpg"),
-  (#e7b788, "pic04.jpg"),
-  (#8ea9e8, "pic05.jpg"),
-  (#87c5a4, "pic06.jpg")
-);
-$spotlight-odd-bg-color: #2e3450;
-$spotlight-even-bg-color: #333856;
-$generic-bg-color: $primary-color;
-$massa-bg-color: $secondary-color;
-$form-input-bg-color: $secondary-color;
-$form-input-hover-bg-color: $anakiwa;
-$contact-border-color: $martinique;
-$contact-link-hover-color: $anakiwa;
-$footer-link-color: $anakiwa;
-$footer-main-text-color: #374860;
+
+$menu-bg-color: $port-gore;
+
+$post-child-1n-bg-color: #5052b5;
+$post-child-2n-bg-color: #4c4ead;
+$post-child-3n-bg-color: #484aa3;
+$what-we-do-bg-color: $mulberry;
+$footer-bg-color: $minsk;

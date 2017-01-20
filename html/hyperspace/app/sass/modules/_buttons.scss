@@ -1,0 +1,9 @@
+.btn {
+  @extend %inline-block, .text--upper-special, %text-center, %color-white;
+  font-size: rem($base-font-size, $button-base-font-size);
+  @include lineHeight(em($button-base-font-size, 67));
+  padding-left: em($button-base-font-size, 50);
+  padding-right: em($button-base-font-size, 50);
+  @include border-radius(em($button-base-font-size, 67));
+  border: 1px solid $main-text-color;
+}
