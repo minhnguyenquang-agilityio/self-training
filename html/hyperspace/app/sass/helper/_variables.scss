@@ -7,55 +7,52 @@ $h1-font-size: 60.5;
 $h2-font-size: 38.5;
 $h3-font-size: 24;
 $text-base-font-size: 22;
-$banner-text-base-font-size: 27.5;
 $button-base-font-size: 13;
-$normal-icon-base-font-size: 27.5;
-$social-icon-base-font-size: 22;
 $menu-base-font-size: 13;
-$form-base-font-size: 22;
+$banner-text-base-font-size: 27.5;
+$footer-base-font-size: 17.5;
 
-/* Extra small font size */
+/* Large Devices, Wide Screens */
+$lg-h1-font-size: 48;
+$lg-h2-font-size: 30;
+$lg-h3-font-size: 19;
+$lg-text-base-font-size: 17;
+$lg-button-base-font-size: 10.5;
+$lg-menu-base-font-size: 10.5;
+$lg-banner-text-base-font-size: 21.5;
+$lg-footer-base-font-size: 14;
+
+/* Medium Devices, Desktops */
+$md-h1-font-size: 44;
+$md-h2-font-size: 28;
+$md-h3-font-size: 17.5;
+$md-text-base-font-size: 16;
+$md-button-base-font-size: 9.5;
+$md-menu-base-font-size: 9.5;
+$md-banner-text-base-font-size: 20;
+$md-footer-base-font-size: 13;
+
+/* Small Devices, Tablets */
+
+/* Extra Small Devices, Phones */
 $xs-h1-font-size: 32;
-$xs-h2-font-size: 24;
-$xs-h3-font-size: 20;
-$xs-base-font-size: 16;
-$xs-logo-base-font-size: 13;
-$xs-form-base-font-size: 14;
-$xs-button-base-font-size: 13;
-$xs-menu-base-font-size: 13;
-$xs-icon-base-font-size: 17;
-$xs-text-normal-base-font-size: 16;
-$xs-text-upper-wide-base-font-size: 11;
-$xs-footer-base-font-size: 13;
+$xs-h2-font-size: 20;
+$xs-h3-font-size: 16;
+$xs-banner-text-base-font-size: 16;
+$xs-label-base-font-size: 17.6;
+$xs-input-base-font-size: 16;
 
-/* Small font size */
-$sm-h1-font-size: 52;
-$sm-h2-font-size: 28;
-$sm-form-base-font-size: 15;
-
-/* Large font size */
-$lg-h1-font-size: 61;
-$lg-h2-font-size: 33;
-$lg-h3-font-size: 25;
-$lg-form-base-font-size: 18;
-$lg-button-base-font-size: 15;
-$lg-icon-base-font-size: 20;
-$lg-logo-base-font-size: 15;
-$lg-menu-base-font-size: 15;
-$lg-text-normal-base-font-size: 19;
-$lg-text-upper-wide-base-font-size: 13;
-$lg-footer-base-font-size: 15;
-
-/* Extra large font size */
-$xl-h3-font-size: 31;
-$xl-form-base-font-size: 22;
-$xl-button-base-font-size: 18;
-$xl-icon-base-font-size: 24;
-$xl-logo-base-font-size: 18;
-$xl-menu-base-font-size: 18;
-$xl-text-normal-base-font-size: 23;
-$xl-text-upper-wide-base-font-size: 16;
-$xl-footer-base-font-size: 18;
+/* Custom, iPhone Retina */
+$ip-h1-font-size: 29;
+$ip-h2-font-size: 18;
+$ip-h3-font-size: 14.5;
+$ip-text-base-font-size: 14.5;
+$ip-banner-text-base-font-size: 14.5;
+$ip-label-base-font-size: 16;
+$ip-input-base-font-size: 14.5;
+$ip-button-base-font-size: 9;
+$ip-menu-base-font-size: 9;
+$ip-footer-base-font-size: 11.5;
 
 /* color names */
 

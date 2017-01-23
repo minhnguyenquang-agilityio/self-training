@@ -1,9 +1,31 @@
 .btn {
-  @extend %inline-block, .text--upper-special, %text-center, %color-white;
+  @extend %inline-block, .text--upper-special, %text-center, %color-white, %relative;
   font-size: rem($base-font-size, $button-base-font-size);
-  @include lineHeight(em($button-base-font-size, 67));
+  @include lineHeight(em($button-base-font-size, 62));
   padding-left: em($button-base-font-size, 50);
   padding-right: em($button-base-font-size, 50);
-  @include border-radius(em($button-base-font-size, 67));
+  @include border-radius(em($button-base-font-size, 62));
   border: 1px solid $main-text-color;
+
+  &--default {
+    background-color: transparent;
+  }
+
+  &:after {
+    @extend %full-width, %full-height, %absolute, %top-0, %left-0;
+    @include border-radius(em($button-base-font-size, 62));
+    content: '';
+    background-color: $white;
+    transform: scale(0.2);
+    opacity: 0;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+  }
+
+  @include linkState() {
+    &:after {
+      transition: opacity 0.2s ease, transform 0.2s ease;
+      transform: scale(1);
+      opacity: 0.05;
+    }
+  }
 }
