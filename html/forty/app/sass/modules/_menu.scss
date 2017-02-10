@@ -1,0 +1,87 @@
+.menu {
+  @extend %fixed, %full-width, %full-height, %top-0, %hide, %align-items-center;
+  line-height: 100%;
+  background-color: $menu-bg-color;
+  z-index: 500;
+  opacity: 0.9;
+
+  &__inner {
+    overflow-y: auto;
+    width: em($base-font-size, 246);
+    max-height: 100vh;
+    margin: 0 auto;
+  }
+
+  &__link,
+  &__action {
+    a.menu__item {
+      @extend %block, %full-width, %text-center;
+      font-size: em($base-font-size, $menu-base-font-size);
+    }
+  }
+
+  &__link {
+    margin-bottom: em($base-font-size, 15);
+
+    & > li {
+      a.menu__item {
+        @extend %cl-white;
+        padding-top: em($menu-base-font-size, 14);
+        padding-bottom: em($menu-base-font-size, 14);
+
+        @include linkState() {
+          @extend %cursor-pointer;
+          color: $menu-item-hover-color;
+        }
+      }
+
+      &:not(:last-child) {
+        border-bottom: 1px solid $menu-border-bottom-color;
+      }
+    }
+  }
+
+  &__action {
+    & > li {
+      margin-bottom: em($menu-base-font-size, 15);
+    }
+  }
+
+  &__close-btn {
+    @extend %block, %absolute, %top-0, %right-0;
+    width: em($base-font-size, 75);
+    height: em($base-font-size, 75);
+
+    &:before,
+    &:after {
+      @extend %absolute, %block;
+      content: '';
+      width: em($base-font-size, 75);
+      height: em($base-font-size, 75);
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    &:before {
+      background-image: url("data:image/svg+xml;charset=utf8,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='https://www.w3.org/1999/xlink' width='20px' height='20px' viewBox='0 0 20 20' zoomAndPan='disable'><style>line %7B stroke: %23ffffff%3B stroke-width: 2%3B %7D</style><line x1='0' y1='0' x2='20' y2='20' /><line x1='20' y1='0' x2='0' y2='20' /></svg>");
+    }
+
+    &:after {
+      background-image: url("data:image/svg+xml;charset=utf8,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='https://www.w3.org/1999/xlink' width='20px' height='20px' viewBox='0 0 20 20' zoomAndPan='disable'><style>line %7B stroke: %239bf1ff%3B stroke-width: 2%3B %7D</style><line x1='0' y1='0' x2='20' y2='20' /><line x1='20' y1='0' x2='0' y2='20' /></svg>");
+      display: none;
+    }
+
+    &:hover {
+      @extend %cursor-pointer;
+
+      &:after {
+        @extend %block;
+      }
+    }
+
+  }
+
+  body.is-menu-visible & {
+    @extend %display-flex;
+  }
+}

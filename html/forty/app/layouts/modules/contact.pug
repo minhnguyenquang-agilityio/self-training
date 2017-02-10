@@ -7,27 +7,30 @@ section.contact.contact-wrapper
       .input__group
         label.input__title Email
         input.input__control(type="email", name="email", required)
+      .clear-both
       .input__group
         label.input__title Message
         textarea.input__control(required)
       .button-group
-        button.btn.btn--background(type="submit") Send messages
-        button.btn.btn--transparent(type="button") Clear
+        //- input.btn.btn--background(type="submit" value="Send message")
+        //- input.btn.btn--transparent(type="reset" value="Clear")
+        button.btn.btn--background(type="submit") Send message
+        button.btn.btn--transparent(type="reset") Clear
 
     //- TODO: use html5 tag for address
     section.contact__info
       article.contact__email
-        span.fa.fa-envelope.fa-icon
+        span.fa.fa-envelope.fa-icon.unhoverable
         h3.contact__title Email
-        a.contact__data(href="mailto:information@untitled.tld") information@untitled.tld
+        a.text--normal.contact__data(href="mailto:information@untitled.tld") information@untitled.tld
       article.contact__phone
-        span.fa.fa-phone.fa-icon
+        span.fa.fa-phone.fa-icon.unhoverable
         h3.contact__title Phone
-        p.contact__data (000) 000-0000 x12387
+        p.text--normal.contact__data (000) 000-0000 x12387
       article.contact__address
-        span.fa.fa-home.fa-icon
+        span.fa.fa-home.fa-icon.unhoverable
         h3.contact__title Address
-        address.contact__data(href="mailto:information@untitled.tld") 1234 Somewhere Road #5432
+        address.text--normal.contact__data(href="mailto:information@untitled.tld") 1234 Somewhere Road #5432
           br
           | Nashville, TN 00000
           br

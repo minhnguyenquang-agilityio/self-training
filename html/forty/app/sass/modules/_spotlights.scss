@@ -1,0 +1,42 @@
+.spotlights {
+
+}
+
+.spotlight {
+
+  &__wrapper {
+    @extend %overflow-hidden;
+
+    &:nth-child(2n+1) {
+      background-color: $spotlight-odd-bg-color;
+    }
+    &:nth-child(2n) {
+      background-color: $spotlight-even-bg-color;
+    }
+  }
+
+  &__image,
+  &__content {
+    @extend %full-width;
+  }
+
+  &__image {
+    img {
+      @extend %block, %full-width;
+      height: auto;
+    }
+  }
+
+  &__content {
+    padding-top: em($base-font-size, 40);
+    padding-bottom: em($base-font-size, 40);
+
+    .massa {
+      &__content {
+        line-height: em($text-normal-base-font-size, 22);
+        margin-top: em($text-normal-base-font-size, 10);
+        margin-bottom: em($text-normal-base-font-size, 30);
+      }
+    }
+  }
+}

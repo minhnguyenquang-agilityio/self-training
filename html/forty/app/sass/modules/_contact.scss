@@ -1,53 +1,61 @@
 .contact {
   &-wrapper {
-    @extend %overflow-hidden;
-    @include box-shadow(inset 0 -1px 0 0 $contact-border-color);
+    @extend %overflow-hidden, %relative;
+
+    &:after {
+      @extend %block, %absolute, %bottom-0;
+      content: '';
+      border-bottom: 1px solid $contact-border-color;
+      width: calc(100vw + 3em);
+      margin-left: -3em;
+    }
   }
 
   &__form,
   &__info {
-    @extend %float-left;
+    @extend %float-left, %full-width;
   }
 
   &__form {
-    width: 60%;
-    padding-top: em($base-font-size, 100);
+    padding-top: em($form-base-font-size, 50);
+    padding-bottom: em($form-base-font-size, 50);
 
     .input__group {
-      @extend %box-sizing;
-      margin-bottom: em($base-font-size, 50);
-      padding-right: em($base-font-size, 50);
+      margin-bottom: em($form-base-font-size, 30);
 
       &:nth-child(1),
       &:nth-child(2) {
         @extend %float-left;
-        width: 50%;
       }
     }
 
     .button-group {
       .btn {
-        margin-right: em($base-font-size, 20);
+        margin-right: em($form-base-font-size, 20);
+        margin-bottom: em($base-font-size, 10);
       }
     }
   }
 
   &__info {
-    width: 40%;
-    @include box-shadow(inset 1px 0 0 0 $contact-border-color);
-
     article {
       @extend %relative;
-      padding-top: em($base-font-size, 65);
-      padding-right: em($base-font-size, 65);
-      padding-bottom: em($base-font-size, 70);
-      padding-left: em($base-font-size, 145);
-      @include box-shadow(inset 0 -1px 0 0 $contact-border-color);
+      padding-top: em($base-font-size, 45);
+      padding-left: em($base-font-size, 40);
+      padding-bottom: em($base-font-size, 45);
 
       .fa-icon {
         @extend %absolute;
-        top: em($base-font-size, 65);
-        left: em($base-font-size, 70);
+        top: em($base-font-size, 45);
+        left: em($base-font-size, 0);
+      }
+
+      &:before {
+        @extend %block, %absolute, %top-0;
+        content: '';
+        border-top: 1px solid $contact-border-color;
+        width: calc(100vw + 3em);
+        margin-left: -3em;
       }
 
     }
@@ -55,12 +63,13 @@
 
   &__title {
     @extend %font-weight-700;
-    margin-bottom: em(40, 31);
+    margin-bottom: em($h3-font-size, 14);
   }
 
   &__data {
-    font-size: em($base-font-size, 24);
+    @extend %text-style-normal;
     color: $white;
+    line-height: 1.5em;
   }
 
   a#{&}__data {

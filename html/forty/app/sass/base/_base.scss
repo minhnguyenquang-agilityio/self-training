@@ -3,10 +3,6 @@
    License: none (public domain)
 */
 
-body {
-  @extend %cl-default, %source-sans-pro, %bgc-default;
-}
-
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -19,14 +15,20 @@ table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+time, mark, audio, video, input, textarea, button {
+  @extend %source-sans-pro, %box-sizing;
   margin: 0;
   padding: 0;
   border: 0;
   font-size: 100%;
-  font: inherit;
   vertical-align: baseline;
 }
+
+body {
+  @extend %cl-default, %bgc-default;
+  min-width: 320px;
+}
+
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
@@ -53,27 +55,15 @@ table {
 }
 
 h1 {
-  font-size: em($base-font-size, 74);
+  font-size: rem($base-font-size, $h1-font-size);
 }
 
 h2 {
-  font-size: em($base-font-size, 40);
+  font-size: em($base-font-size, $h2-font-size);
 }
 
 h3 {
-  font-size: em($base-font-size, 30);
-}
-
-h4 {
-  font-size: em($base-font-size, 23);
-}
-
-h5 {
-  font-size: em($base-font-size, 18);
-}
-
-h6 {
-  font-size: em($base-font-size, 14);
+  font-size: rem($base-font-size, $h3-font-size);
 }
 
 a {

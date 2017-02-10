@@ -11,10 +11,11 @@
 
 /* Class extend font-family */
 %source-sans-pro {
-  font-family: $source-sans-pro;
+  font-family: $source-sans-pro, Arial;
 }
 
 /* Class extend for text style */
+
 %text-no-transform {
   text-transform: none;
 }
@@ -25,6 +26,10 @@
 
 %text-capitalize {
   text-transform: capitalize;
+}
+
+%text-style-normal {
+  font-style: normal;
 }
 
 %text-center {
@@ -352,21 +357,18 @@
   @include align-items(center);
 }
 
-/* For doctor item in list doctors */
-%list-doctors__item {
-  @extend %float-left;
-  padding-left: em($base-font-size, 5);
-  padding-right: em($base-font-size, 5);
-}
-
 %transition-ease-out-all {
   transition: all 0.3s ease-out;
 }
 
-.max-content {
-  @include maxContent();
+%no-animation {
+  animation: none;
 }
 
-.min-content {
-  @include minContent();
+%text-upper-wide {
+  font-size: rem($base-font-size, 10);
+  @extend %font-weight-600;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  line-height: 1.5em;
 }

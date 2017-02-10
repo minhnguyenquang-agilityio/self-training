@@ -1,15 +1,24 @@
 .major {
-  z-index: 100;
+  @extend %relative;
+  z-index: 10;
 
   &__title {
     @extend %font-weight-700;
     border-bottom: 2px solid $white;
     width: calc(100% + 0.5em);
     padding-bottom: 0.7em;
-    margin-bottom: 0.5em;
+    margin-bottom: 0.6em;
   }
 
-  &__content {
-    @extend %text-uppercase, %font-weight-600;
+  body.is-ie .tiles & {
+    &__title {
+      max-width: 12em;
+    }
+  }
+
+  body.is-ie .massa & {
+    &__title {
+      max-width: 10em;
+    }
   }
 }

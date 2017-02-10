@@ -1,0 +1,122 @@
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+  h1 {
+    font-size: rem($base-font-size, $lg-h1-font-size);
+  }
+
+  h2 {
+    font-size: rem($base-font-size, $lg-h2-font-size);
+  }
+
+  h3 {
+    font-size: rem($base-font-size, $lg-h3-font-size);
+  }
+
+  .text {
+    &--normal {
+      font-size: rem($base-font-size, $lg-text-normal-base-font-size);
+    }
+
+    &--upper-wide {
+      font-size: rem($base-font-size, $lg-text-upper-wide-base-font-size);
+    }
+  }
+
+
+  .header {
+    @include lineHeight(em($base-font-size, 61));
+  }
+
+  .menu {
+    &__inner {
+      width: em($base-font-size, 336);
+    }
+
+    &__link,
+    &__action {
+      a.menu__item {
+        font-size: em($base-font-size, $lg-menu-base-font-size);
+      }
+    }
+  }
+
+  .form {
+    .input {
+      &__group {
+        font-size: rem($base-font-size, $lg-form-base-font-size);
+      }
+    }
+  }
+
+  .btn {
+    font-size: rem($base-font-size, $lg-button-base-font-size);
+  }
+
+  .fa-icon {
+    &:before {
+      font-size: rem($base-font-size, $lg-icon-base-font-size);
+    }
+  }
+
+  .header {
+    .logo {
+      font-size: em($base-font-size, $lg-logo-base-font-size);
+    }
+
+    nav {
+      a.menu-btn {
+        font-size: em($base-font-size, $lg-menu-base-font-size);
+        text-indent: 0;
+      }
+    }
+  }
+
+  .tile {
+    &__wrapper {
+      height: em($base-font-size, 430);
+    }
+
+    &__inner {
+      padding-left: em($base-font-size, 90);
+      padding-right: em($base-font-size, 90);
+    }
+  }
+
+  .spotlight {
+    &__wrapper {
+      height: em($base-font-size, 480);
+    }
+
+    &__image {
+      width: 30%;
+    }
+
+    &__content {
+      width: 70%;
+    }
+  }
+
+  .contact {
+    &__info {
+      article {
+        padding-top: em($base-font-size, 60);
+        padding-bottom: em($base-font-size, 60);
+        padding-left: em($base-font-size, 60);
+
+        .fa-icon {
+          top: em($base-font-size, 55);
+          left: em($base-font-size, 0);
+        }
+      }
+    }
+  }
+
+  .footer {
+    .copyright {
+      & > li {
+        font-size: em($base-font-size, $lg-footer-base-font-size);
+      }
+    }
+  }
+
+}

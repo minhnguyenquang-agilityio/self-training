@@ -1,33 +1,46 @@
+$banner-text-base-fs: 10;
+
 .banner {
   &-wrapper {
-    @extend %display-flex, %relative;
+    @extend %display-flex, %relative, %full-width;
     @include align-items(center);
-    height: em($base-font-size, 515);
-    padding-top: em($base-font-size, 100);
-    padding-bottom: em($base-font-size, 40);
+    padding-top: em($base-font-size, 120);
+    padding-bottom: em($base-font-size, 60);
     background-image: url("../assets/images/banner.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
     background-position: center center;
-    width: 100%;
 
     &:before {
       @extend %absolute, %full-width, %full-height, %top-0;
       content: '';
       background-color: $primary-color;
-      opacity: 0.85;
+      opacity: 1;
+
+      body.loaded & {
+        opacity: 0.85;
+        transition: opacity 2.5s ease;
+        transition-delay: 0.75s;
+      }
     }
   }
 
-  &__text {
-    @extend %float-left;
-    width: 40%;
-    padding-top: em($base-font-size, 6);
-    padding-bottom: em($base-font-size, 6);
+  &__inner {
+    opacity: 0;
+    transform: translateX(-0.5em);
+    filter: blur(0.5em);
   }
 
-  &__get-started {
+  body.loaded &__inner {
+    @include transition(opacity 1.5s ease, transform 0.5s ease-out, filter 0.5s ease);
+    transform: translateX(0);
+    filter: blur(0);
+    opacity: 1;
+  }
 
+  &__text {
+    @extend %float-left, %full-width;
+    padding-bottom: em($banner-text-base-fs, 20);
   }
 }

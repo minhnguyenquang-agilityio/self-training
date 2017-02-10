@@ -9,11 +9,11 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    width: 40%;
-    height: em($base-font-size, 485);
+    height: em($base-font-size, 290);
+    width: 100%;
 
     &:before {
-      @extend %absolute, %full-width, %full-height, %transition-ease-out-all;;
+      @extend %absolute, %full-width, %full-height, %transition-ease-out-all, %top-0;
       content: '';
       opacity: 0.85;
     }
@@ -25,11 +25,6 @@
         @extend %transition-ease-out-all, %cursor-pointer;
         opacity: 0;
       }
-    }
-
-    &:nth-child(4n + 2),
-    &:nth-child(4n + 3) {
-      width: 60%;
     }
 
     // apply background image and background color for tiles
@@ -48,6 +43,9 @@
   }
 
   &__inner {
-    padding: em($base-font-size, 50) em($base-font-size, 88);
+    @extend %relative;
+    z-index: 10;
+    padding-left: em($base-font-size, 24);
+    padding-right: em($base-font-size, 24);
   }
 }

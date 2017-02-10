@@ -1,0 +1,86 @@
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px) {
+  .text {
+    &--normal {
+      font-size: rem($base-font-size, $xs-text-normal-base-font-size);
+    }
+
+    &--upper-wide {
+      font-size: rem($base-font-size, $xs-text-upper-wide-base-font-size);
+    }
+  }
+
+  .menu {
+    &__inner {
+      width: em($base-font-size, 288);
+    }
+
+    &__link,
+    &__action {
+      a.menu__item {
+        font-size: em($base-font-size, $xs-menu-base-font-size);
+      }
+    }
+  }
+
+  .header {
+    .logo {
+      span {
+        display: inline-block;
+      }
+    }
+    nav {
+      a.menu-btn {
+        font-size: em($base-font-size, $xs-menu-base-font-size);
+        padding-right: em($xs-menu-base-font-size, 80);
+        padding-left: em($xs-menu-base-font-size, 10);
+        text-indent: 0;
+      }
+    }
+  }
+
+  .tile {
+    &__wrapper {
+      height: em($base-font-size, 256);
+      width: 50%;
+    }
+  }
+
+  .contact {
+    &__form {
+      .input__group {
+        &:nth-child(1) {
+          padding-right: em($base-font-size, 15);
+        }
+        &:nth-child(2) {
+          padding-left: em($base-font-size, 15);
+        }
+        &:nth-child(1),
+        &:nth-child(2) {
+          width: 50%;
+        }
+      }
+
+      .button-group {
+        .btn {
+          margin-right: em($form-base-font-size, 20);
+        }
+      }
+    }
+  }
+
+  .footer {
+    .copyright {
+      & > li {
+        float: left;
+
+        &:not(:last-child) {
+          border-right: 1px solid $footer-main-text-color;
+          padding-right: em($footer-base-font-size, 20);
+          margin-right: em($footer-base-font-size, 20);
+        }
+      }
+    }
+  }
+
+}

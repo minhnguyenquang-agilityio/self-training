@@ -1,0 +1,115 @@
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1600px) {
+  h3 {
+    font-size: rem($base-font-size, $xl-h3-font-size);
+  }
+
+  .text {
+    &--normal {
+      font-size: rem($base-font-size, $xl-text-normal-base-font-size);
+    }
+
+    &--upper-wide {
+      font-size: rem($base-font-size, $xl-text-upper-wide-base-font-size);
+    }
+  }
+
+
+  .header {
+    @include lineHeight(em($base-font-size, 74));
+
+    nav {
+      a.menu-btn {
+        font-size: em($base-font-size, $xl-menu-base-font-size);
+      }
+    }
+
+  }
+
+  .menu {
+    &__inner {
+      width: em($base-font-size, 408);
+    }
+
+    &__link,
+    &__action {
+      a.menu__item {
+        font-size: em($base-font-size, $xl-menu-base-font-size);
+      }
+    }
+  }
+
+  .form {
+    .input {
+      &__group {
+        font-size: rem($base-font-size, $xl-form-base-font-size);
+      }
+    }
+  }
+
+  .btn {
+    font-size: rem($base-font-size, $xl-button-base-font-size);
+  }
+
+  .fa-icon {
+    &:before {
+      font-size: rem($base-font-size, $xl-icon-base-font-size);
+    }
+  }
+
+  .header {
+    .logo {
+      font-size: em($base-font-size, $xl-logo-base-font-size);
+    }
+  }
+
+
+  .tile {
+    &__wrapper {
+      height: em($base-font-size, 520);
+    }
+
+    &__inner {
+      padding-left: em($base-font-size, 90);
+      padding-right: em($base-font-size, 90);
+    }
+  }
+
+  .spotlight {
+    &__wrapper {
+      height: em($base-font-size, 490);
+    }
+  }
+
+  .generic {
+    &.massa__wrapper {
+      padding-top: em($base-font-size, 150);
+    }
+  }
+
+  .contact {
+    &__info {
+      padding-left: em($base-font-size, 70);
+
+      article {
+        padding-top: em($base-font-size, 70);
+        padding-bottom: em($base-font-size, 70);
+        padding-left: em($base-font-size, 70);
+
+        .fa-icon {
+          top: em($base-font-size, 65);
+          left: em($base-font-size, 0);
+        }
+      }
+    }
+  }
+
+  .footer {
+    .copyright {
+      & > li {
+        font-size: em($base-font-size, $xl-footer-base-font-size);
+      }
+    }
+  }
+
+}

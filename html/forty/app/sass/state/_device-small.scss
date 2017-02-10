@@ -1,0 +1,88 @@
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+  h1 {
+    font-size: rem($base-font-size, $sm-h1-font-size);
+  }
+
+  h2 {
+    font-size: rem($base-font-size, $sm-h2-font-size);
+  }
+
+  .header {
+    @include lineHeight(em($base-font-size, 52));
+  }
+
+  .wrapper
+  {
+    .container
+    {
+      width: calc(100% - 6em);
+    }
+  }
+
+  .banner {
+    &-wrapper {
+      padding-top: em($base-font-size, 220);
+      padding-bottom: em($base-font-size, 160);
+    }
+
+    &__content {
+      @include display-flex;
+      @include align-items(center);
+    }
+
+    &__text {
+      width: 60%;
+      max-width: 37.5em;
+      padding-bottom: 0;
+    }
+  }
+
+  .tile {
+    &__wrapper {
+      height: em($base-font-size, 320);
+    }
+
+    &__inner {
+      padding-left: em($base-font-size, 50);
+      padding-right: em($base-font-size, 50);
+    }
+  }
+
+  .spotlight {
+    &__content {
+      padding-top: em($base-font-size, 70);
+      padding-bottom: em($base-font-size, 70);
+    }
+  }
+
+  .generic {
+    &.massa__wrapper {
+      padding-top: em($base-font-size, 120);
+    }
+  }
+
+  .massa {
+    &__wrapper {
+      padding-top: em($base-font-size, 70);
+      padding-bottom: em($base-font-size, 50);
+    }
+
+    &__content {
+      margin-top: em($text-normal-base-font-size, 30);
+    }
+  }
+
+  .form {
+    .input {
+      &__group {
+        font-size: rem($base-font-size, $sm-form-base-font-size);
+      }
+    }
+  }
+
+  .footer {
+    padding-top: em($base-font-size, 70);
+    padding-bottom: em($base-font-size, 70);
+  }
+}

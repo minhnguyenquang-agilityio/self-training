@@ -1,26 +1,94 @@
-$logo-base-font-size: 18;
+@include keyframes('reveal-header') {
+  0% { top: -4em; opacity: 0;}
+  100% { top: 0; opacity: 1;}
+}
 
 .header {
-  @extend %absolute;
-  height: 75px;
-  line-height: 75px;
-  padding-left: em($logo-base-font-size, 20);
-  padding-right: em($logo-base-font-size, 20);
+  @extend %fixed, %full-width;
+  @include lineHeight(em($base-font-size, 40));
+  padding-left: em($logo-base-font-size, 12);
+  padding-right: em($logo-base-font-size, 12);
+  background-color: $header-bg-color;
   z-index: 100;
 
   .logo {
     @extend %color-white, %font-weight-600, %text-uppercase;
     font-size: em($base-font-size, $logo-base-font-size);
     letter-spacing: em($logo-base-font-size, 5);
+    opacity: 0;
 
     strong {
       color: $logo-text-color;
       background-color: $white;
-      padding-top: em($logo-base-font-size, 2);
-      padding-bottom: em($logo-base-font-size, 2);
-      padding-left: em($logo-base-font-size, 5);
-      padding-right: em($logo-base-font-size, 2);
+      padding: em($logo-base-font-size, 2, 2, 2, 5);
       margin-right: em($logo-base-font-size, 5);
     }
+
+    span {
+      @extend %hide;
+    }
+
+    body.loaded & {
+      opacity: 1;
+      transition: opacity 2.5s ease;
+      transition-delay: 0.75s;
+    }
   }
+
+  &.reveal {
+    @extend %no-animation;
+    animation: reveal-header 0.5s ease;
+  }
+
+  &.alt {
+    @extend %absolute, %no-animation;
+    transition: opacity 0.5s ease, top 0.5s ease;
+    transition-delay: 0.75s;
+    background-color: transparent;
+  }
+
+  nav {
+    @extend %float-right;
+
+    a.menu-btn {
+      @extend %relative, %inline-block;
+      transition: color 0.3s ease-out;
+      font-size: em($base-font-size, $menu-base-font-size);
+      color: $white;
+      @include lineHeight(inherit);
+      padding-right: 0;
+      padding-left: 0em;
+      width: 4em;
+      text-indent: 10em;
+
+      &:before,
+      &:after {
+        @extend %block, %absolute, %top-0, %right-0, %vertical-middle, %full-height;
+        transition: opacity 0.3s ease-out;
+        content: '';
+        background-repeat: no-repeat;
+        background-position: center;
+        width: em($base-font-size, 40);
+      }
+
+      &:before {
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='32' viewBox='0 0 24 32' preserveAspectRatio='none'%3E%3Cstyle%3Eline %7B stroke-width: 2px%3B stroke: %23ffffff%3B %7D%3C/style%3E%3Cline x1='0' y1='11' x2='24' y2='11' /%3E%3Cline x1='0' y1='21' x2='24' y2='21' /%3E%3Cline x1='0' y1='16' x2='24' y2='16' /%3E%3C/svg%3E");
+      }
+
+      &:after {
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='32' viewBox='0 0 24 32' preserveAspectRatio='none'%3E%3Cstyle%3Eline %7B stroke-width: 2px%3B stroke: %239bf1ff%3B %7D%3C/style%3E%3Cline x1='0' y1='11' x2='24' y2='11' /%3E%3Cline x1='0' y1='21' x2='24' y2='21' /%3E%3Cline x1='0' y1='16' x2='24' y2='16' /%3E%3C/svg%3E");
+        opacity: 0;
+      }
+
+      @include linkState() {
+        transition: color 0.3s ease-out;
+        color: $menu-item-hover-color;
+
+        &:after {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
 }
