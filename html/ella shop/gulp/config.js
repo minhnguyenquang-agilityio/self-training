@@ -7,8 +7,7 @@ global.isProduction = process.env.ENV === 'prod';
 global.config = {
   scripts: [
     bower + 'jquery/dist/jquery.js',
-    bower + 'jquery.scrollex/jquery.scrollex.js',
-    bower + 'jquery-scrolly/jquery.scrolly.js',
+    bower + 'bootstrap-sass/assets/javascripts/bootstrap.js',
     'app/scripts/main.js'
   ],
   filenames: {
