@@ -1,0 +1,17 @@
+.input {
+  &__group {
+    margin-bottom: 20px;
+  }
+
+  &__name {
+    @extend %font-weight-700;
+    margin-bottom: 10px;
+  }
+
+  &__field {
+    @extend %full-width;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: black;
+  }
+}

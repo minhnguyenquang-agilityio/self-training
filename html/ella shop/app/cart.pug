@@ -1,0 +1,90 @@
+doctype html
+html(lang='en')
+  head
+    title Ella
+    meta(name="viewport" content="width=device-width, initial-scale=1, user-scalable=no")
+    //styles
+    <!--[if lte IE 9]><link rel="stylesheet" type="text/css" href="css/ie.css"><![endif]-->
+  body
+    .wrapper
+      include layouts/header
+
+      .main
+        .container.cart
+          .cart__nav
+            h1.pull-left My cart
+            a.pull-right(href="#") Continue shopping
+            .clear-fix
+          .row
+            .col-md-9
+              .hero Products
+              .row.product__detail
+                .col-md-5
+                  .product__image
+                .col-md-7
+                  .product__info
+                    .product__title Cras in nunc non ipsum duo cursus ultrices est
+                    .product__vendor
+                      label.product__info-label Vendor
+                      span Acme
+                    .product__price $25.00
+                    .product__info-label Quantity
+                    .btn.btn-md.btn-default.btn-dec -
+                    input(type="text", value="1")
+                    .btn.btn-md.btn-default.btn-inc +
+              .row.product__detail
+                .col-md-5
+                  .product__image
+                .col-md-7
+                  .product__info
+                    .product__title Cras in nunc non ipsum duo cursus ultrices est
+                    .product__vendor
+                      label.product__info-label Vendor
+                      span Acme
+                    .product__price $25.00
+                    .product__info-label Quantity
+                    .btn.btn-md.btn-default.btn-dec -
+                    input(type="text", value="1")
+                    .btn.btn-md.btn-default.btn-inc +
+              .row.product__detail
+                .col-md-5
+                  .product__image
+                .col-md-7
+                  .product__info
+                    .product__title Cras in nunc non ipsum duo cursus ultrices est
+                    .product__vendor
+                      label.product__info-label Vendor
+                      span Acme
+                    .product__price $25.00
+                    .product__info-label Quantity
+                    .btn.btn-md.btn-default.btn-dec -
+                    input(type="text", value="1")
+                    .btn.btn-md.btn-default.btn-inc +
+            .col-md-3
+              .hero Total
+              .total $200.00
+              p Additional comments
+              textarea.additional-comment
+              .btn.btn-lg.btn-default.btn-block Proceed to checkout
+
+              .shipping
+                .shipping__title GET SHIPPING ESTIMATES
+                .input__group
+                  .input__name Country
+                  select.input__field
+                    option(value="America") America
+                    option(value="England") England
+                    option(value="Vietnam") Vietnam
+                .input__group
+                  .input__name State
+                  select.input__field
+                    option(value="Alabama") Alabama
+                    option(value="Ohio") Ohio
+                    option(value="Guam") Guam
+                    option(value="Hawaii") Hawaii
+                    option(value="Arizona") Arizona
+                .input__group
+                  .input__name Postal/Zip Code
+                  input.input__field(type="text")
+                .btn.btn-md.btn-default Calculate shipping
+    //scripts

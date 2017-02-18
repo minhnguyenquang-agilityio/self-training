@@ -1,0 +1,35 @@
+.cart {
+
+  &__nav {
+    overflow: hidden;
+    margin-bottom: 20px;
+
+    h1 {
+      @extend %font-weight-700, %text-uppercase;
+      font-size: 40px;
+    }
+  }
+
+  .total {
+    @extend %font-weight-700, %text-center;
+    font-size: 25px;
+    margin-bottom: 15px;
+  }
+
+  .additional-comment {
+    @extend %full-width;
+    height: 100px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+  }
+
+  .shipping {
+    &__title {
+      @extend %font-weight-700, %text-uppercase;
+      padding-top: 15px;
+      margin-bottom: 15px;
+      margin-top: 25px;
+      border-top: 1px solid grey;
+    }
+  }
+}

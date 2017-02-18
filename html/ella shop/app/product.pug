@@ -7,65 +7,11 @@ html(lang='en')
     <!--[if lte IE 9]><link rel="stylesheet" type="text/css" href="css/ie.css"><![endif]-->
   body
     .wrapper
-      nav#navbar-example.navbar.navbar-default.navbar-static.header
-        .container-fluid
-          .navbar-header
-            button.collapsed.navbar-toggle(type='button', data-toggle='collapse', data-target='.bs-example-js-navbar-collapse')
-              span.sr-only Toggle navigation
-              span.icon-bar
-              span.icon-bar
-              span.icon-bar
-            a.navbar-brand.logo(href='#') MinMinShop
-          .collapse.navbar-collapse.bs-example-js-navbar-collapse
-            ul.nav.navbar-nav
-              li.dropdown
-                a#drop1.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
-                  | Collections
-                  span.caret
-                ul.dropdown-menu(aria-labelledby='drop1')
-                  li
-                    a(href='#') Men
-                  li
-                    a(href='#') Women
-                  li
-                    a(href='#') Shoes
-                  li
-                    a(href='#') Accessories
-                  li
-                    a(href='#') Editor's pick
-              li.dropdown
-                a#drop2.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
-                  | Dropdown
-                  span.caret
-                ul.dropdown-menu(aria-labelledby='drop2')
-                  li
-                    a(href='#') Action
-                  li
-                    a(href='#') Another action
-                  li
-                    a(href='#') Something else here
-                  li.divider(role='separator')
-                  li
-                    a(href='#') Separated link
-            ul.nav.navbar-nav.navbar-right
-              li#fat-menu.dropdown
-                a#drop3.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
-                  | Dropdown
-                  span.caret
-                ul.dropdown-menu(aria-labelledby='drop3')
-                  li
-                    a(href='#') Action
-                  li
-                    a(href='#') Another action
-                  li
-                    a(href='#') Something else here
-                  li.divider(role='separator')
-                  li
-                    a(href='#') Separated link
+      include layouts/header
 
       .main
         .container
-          .row.product-detail
+          .row.product__detail
             .col-md-5
               .product__image
             .col-md-7
