@@ -7,7 +7,7 @@ html(lang='en')
     <!--[if lte IE 9]><link rel="stylesheet" type="text/css" href="css/ie.css"><![endif]-->
   body
     .wrapper
-      nav#navbar-example.navbar.navbar-default.navbar-static
+      nav#navbar-example.navbar.navbar-default.navbar-static.header
         .container-fluid
           .navbar-header
             button.collapsed.navbar-toggle(type='button', data-toggle='collapse', data-target='.bs-example-js-navbar-collapse')
@@ -15,7 +15,7 @@ html(lang='en')
               span.icon-bar
               span.icon-bar
               span.icon-bar
-            a.navbar-brand(href='#') MinMinShop
+            a.navbar-brand.logo(href='#') MinMinShop
           .collapse.navbar-collapse.bs-example-js-navbar-collapse
             ul.nav.navbar-nav
               li.dropdown
@@ -76,6 +76,7 @@ html(lang='en')
               .collection.text-center
                 a.collection__title(href="") Accessories
 
+          .hero New arrivals
           .row.product-wrapper
             .col-md-3
               .product.text-center
@@ -159,4 +160,47 @@ html(lang='en')
 
           .show-more.text-center.text-uppercase
             a.btn.btn-lg.btn-default.text-center(href="#") Show more
+
+          .hero Trending now
+          .row
+            .col-md-3
+              .product.text-center
+                a.product__title(href="#") Lorem ipsum dolor sit amet
+                .product__price
+                  span.product__price--old $24.99
+                  span.product__price--new $19.99
+                ul.product__colors
+                  li.product__colors--red
+                  li.product__colors--black
+                  li.product__colors--yellow
+            .col-md-3
+              .product.text-center
+                a.product__title(href="#") erroribus abhorreant
+                .product__price
+                  span.product__price--old $24.99
+                  span.product__price--new $19.99
+                ul.product__colors
+                  li.product__colors--red
+                  li.product__colors--white
+            .col-md-3
+              .product.text-center
+                a.product__title(href="#")  Per zril quando officiis
+                .product__price
+                  span.product__price--old $24.99
+                  span.product__price--new $19.99
+                ul.product__colors
+                  li.product__colors--red
+                  li.product__colors--black
+                  li.product__colors--white
+            .col-md-3
+              .product.text-center
+                a.product__title(href="#") at facer nobis corpora, me
+                .product__price
+                  span.product__price--old $24.99
+                  span.product__price--new $19.99
+                ul.product__colors
+                  li.product__colors--red
+                  li.product__colors--black
+                  li.product__colors--blue
+                  li.product__colors--white
     //scripts
