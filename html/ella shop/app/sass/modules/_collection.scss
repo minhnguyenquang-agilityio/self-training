@@ -1,0 +1,11 @@
+.collection {
+  height: 200px;
+  line-height: 200px;
+  background-color: #5a4181;
+
+  &__title {
+    @extend %font-weight-700;
+    font-size: 24px;
+    color: white;
+  }
+}

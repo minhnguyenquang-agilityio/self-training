@@ -7,60 +7,167 @@ html(lang='en')
     <!--[if lte IE 9]><link rel="stylesheet" type="text/css" href="css/ie.css"><![endif]-->
   body
     .wrapper
-      .main
-        nav#navbar-example.navbar.navbar-default.navbar-static
-          .container-fluid
-            .navbar-header
-              button.collapsed.navbar-toggle(type='button', data-toggle='collapse', data-target='.bs-example-js-navbar-collapse')
-                span.sr-only Toggle navigation
-                span.icon-bar
-                span.icon-bar
-                span.icon-bar
-              a.navbar-brand(href='#') Project Name
-            .collapse.navbar-collapse.bs-example-js-navbar-collapse
-              ul.nav.navbar-nav
-                li.dropdown
-                  a#drop1.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
-                    | Dropdown 
-                    span.caret
-                  ul.dropdown-menu(aria-labelledby='drop1')
-                    li
-                      a(href='#') Action
-                    li
-                      a(href='#') Another action
-                    li
-                      a(href='#') Something else here
-                    li.divider(role='separator')
-                    li
-                      a(href='#') Separated link
-                li.dropdown
-                  a#drop2.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
-                    | Dropdown 
-                    span.caret
-                  ul.dropdown-menu(aria-labelledby='drop2')
-                    li
-                      a(href='#') Action
-                    li
-                      a(href='#') Another action
-                    li
-                      a(href='#') Something else here
-                    li.divider(role='separator')
-                    li
-                      a(href='#') Separated link
-              ul.nav.navbar-nav.navbar-right
-                li#fat-menu.dropdown
-                  a#drop3.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
-                    | Dropdown 
-                    span.caret
-                  ul.dropdown-menu(aria-labelledby='drop3')
-                    li
-                      a(href='#') Action
-                    li
-                      a(href='#') Another action
-                    li
-                      a(href='#') Something else here
-                    li.divider(role='separator')
-                    li
-                      a(href='#') Separated link
+      nav#navbar-example.navbar.navbar-default.navbar-static
+        .container-fluid
+          .navbar-header
+            button.collapsed.navbar-toggle(type='button', data-toggle='collapse', data-target='.bs-example-js-navbar-collapse')
+              span.sr-only Toggle navigation
+              span.icon-bar
+              span.icon-bar
+              span.icon-bar
+            a.navbar-brand(href='#') MinMinShop
+          .collapse.navbar-collapse.bs-example-js-navbar-collapse
+            ul.nav.navbar-nav
+              li.dropdown
+                a#drop1.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
+                  | Collections
+                  span.caret
+                ul.dropdown-menu(aria-labelledby='drop1')
+                  li
+                    a(href='#') Men
+                  li
+                    a(href='#') Women
+                  li
+                    a(href='#') Shoes
+                  li
+                    a(href='#') Accessories
+                  li
+                    a(href='#') Editor's pick
+              li.dropdown
+                a#drop2.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
+                  | Dropdown
+                  span.caret
+                ul.dropdown-menu(aria-labelledby='drop2')
+                  li
+                    a(href='#') Action
+                  li
+                    a(href='#') Another action
+                  li
+                    a(href='#') Something else here
+                  li.divider(role='separator')
+                  li
+                    a(href='#') Separated link
+            ul.nav.navbar-nav.navbar-right
+              li#fat-menu.dropdown
+                a#drop3.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
+                  | Dropdown
+                  span.caret
+                ul.dropdown-menu(aria-labelledby='drop3')
+                  li
+                    a(href='#') Action
+                  li
+                    a(href='#') Another action
+                  li
+                    a(href='#') Something else here
+                  li.divider(role='separator')
+                  li
+                    a(href='#') Separated link
 
+      .main
+        .container
+          .row.collection-wrapper
+            .col-md-4
+              .collection.text-center
+                a.collection__title(href="") Editor's pick
+            .col-md-4
+              .collection.text-center
+                a.collection__title(href="") Shoes
+            .col-md-4
+              .collection.text-center
+                a.collection__title(href="") Accessories
+
+          .row.product-wrapper
+            .col-md-3
+              .product
+                h3.product__title Ex sonet dolore
+                .price
+                  span.old-price $24.99
+                  span.new-price $19.99
+                ul.colors
+                  li.red
+                  li.black
+                  li.blue
+                  li.white
+            .col-md-3
+              .product
+                h3.product__title Ei cetero efficiendi eloquentiam mel,
+                .price
+                  span.old-price $24.99
+                  span.new-price $19.99
+                ul.colors
+                  li.red
+                  li.black
+                  li.blue
+                  li.white
+            .col-md-3
+              .product
+                h3.product__title pro id singulis tincidunt
+                .price
+                  span.old-price $24.99
+                  span.new-price $19.99
+                ul.colors
+                  li.red
+                  li.black
+                  li.blue
+                  li.white
+            .col-md-3
+              .product
+                h3.product__title ullamcorper no
+                .price
+                  span.old-price $24.99
+                  span.new-price $19.99
+                ul.colors
+                  li.red
+                  li.black
+                  li.blue
+                  li.white
+            .col-md-3
+              .product
+                h3.product__title Lorem ipsum dolor sit amet
+                .price
+                  span.old-price $24.99
+                  span.new-price $19.99
+                ul.colors
+                  li.red
+                  li.black
+                  li.blue
+                  li.white
+            .col-md-3
+              .product
+                h3.product__title erroribus abhorreant
+                .price
+                  span.old-price $24.99
+                  span.new-price $19.99
+                ul.colors
+                  li.red
+                  li.black
+                  li.blue
+                  li.white
+            .col-md-3
+              .product
+                h3.product__title  Per zril quando officiis
+                .price
+                  span.old-price $24.99
+                  span.new-price $19.99
+                ul.colors
+                  li.red
+                  li.black
+                  li.blue
+                  li.white
+            .col-md-3
+              .product
+                h3.product__title
+
+
+                at facer nobis corpora, me
+                .price
+                  span.old-price $24.99
+                  span.new-price $19.99
+                ul.colors
+                  li.red
+                  li.black
+                  li.blue
+                  li.white
+
+          button.btn.btn-lg.btn-default(type="button") Show more
     //scripts
