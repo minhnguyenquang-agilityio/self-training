@@ -1,0 +1,109 @@
+doctype html
+html(lang='en')
+  head
+    title Ella
+    meta(name="viewport" content="width=device-width, initial-scale=1, user-scalable=no")
+    //styles
+    <!--[if lte IE 9]><link rel="stylesheet" type="text/css" href="css/ie.css"><![endif]-->
+  body
+    .wrapper
+      nav#navbar-example.navbar.navbar-default.navbar-static.header
+        .container-fluid
+          .navbar-header
+            button.collapsed.navbar-toggle(type='button', data-toggle='collapse', data-target='.bs-example-js-navbar-collapse')
+              span.sr-only Toggle navigation
+              span.icon-bar
+              span.icon-bar
+              span.icon-bar
+            a.navbar-brand.logo(href='#') MinMinShop
+          .collapse.navbar-collapse.bs-example-js-navbar-collapse
+            ul.nav.navbar-nav
+              li.dropdown
+                a#drop1.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
+                  | Collections
+                  span.caret
+                ul.dropdown-menu(aria-labelledby='drop1')
+                  li
+                    a(href='#') Men
+                  li
+                    a(href='#') Women
+                  li
+                    a(href='#') Shoes
+                  li
+                    a(href='#') Accessories
+                  li
+                    a(href='#') Editor's pick
+              li.dropdown
+                a#drop2.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
+                  | Dropdown
+                  span.caret
+                ul.dropdown-menu(aria-labelledby='drop2')
+                  li
+                    a(href='#') Action
+                  li
+                    a(href='#') Another action
+                  li
+                    a(href='#') Something else here
+                  li.divider(role='separator')
+                  li
+                    a(href='#') Separated link
+            ul.nav.navbar-nav.navbar-right
+              li#fat-menu.dropdown
+                a#drop3.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
+                  | Dropdown
+                  span.caret
+                ul.dropdown-menu(aria-labelledby='drop3')
+                  li
+                    a(href='#') Action
+                  li
+                    a(href='#') Another action
+                  li
+                    a(href='#') Something else here
+                  li.divider(role='separator')
+                  li
+                    a(href='#') Separated link
+
+      .main
+        .container
+          .row.product-detail
+            .col-md-5
+              .product__image
+            .col-md-7
+              .product__info
+                .product__title Cras in nunc non ipsum duo cursus ultrices est
+                .product__rate 5 stars
+                .product__review 7 reviews
+                .product__availability
+                  label.product__info-label Availability
+                  span Many in stock
+                .product__type
+                  label.product__info-label Product type
+                  span Shirts
+                .product__vendor
+                  label.product__info-label Vendor
+                  span Acme
+                .product__description
+                  Nam tempus turpis at metus scelerisque placerat nulla deumantos solicitud felis. Pellentesque diam dolor, elementum etos lobortis des mollis ut risus. Sedcus faucibus an sullamcorper mattis drostique des commodo pharetras loremos.Donec pretium egestas sapien et mollis. Sample Unordered List Comodous in tempor ullamcorper miaculis Pellentesque vitae neque mollis urna mattis...
+                .product__price $25.00
+                .product__info-label Color
+                ul.product__colors
+                  li.product__colors--red
+                  li.product__colors--yellow
+                  li.product__colors--blue
+                  li.product__colors--white
+                .product__info-label Size
+                ul.product__size
+                  li S
+                  li M
+                  li L
+                  li XL
+                .product__info-label Quantity
+                .btn.btn-md.btn-default.btn-dec -
+                input(type="text", value="1")
+                .btn.btn-md.btn-default.btn-inc +
+                .product__total
+                  label.product__info-label Subtotal
+                  span $105.00
+                .btn.btn-lg.btn-default.text-uppercase Add to card
+
+    //scripts

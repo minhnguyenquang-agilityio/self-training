@@ -4,15 +4,20 @@
   padding: 15px;
   margin-bottom: 25px;
 
+  &__info {
+    div,
+    ul {
+      margin-bottom: 10px;
+    }
+  }
+
   &__title {
     @extend %block, %font-weight-600;
     color: black;
-    margin-bottom: 10px;
   }
 
   &__price {
     @extend %font-weight-700;
-    margin-bottom: 10px;
 
     &--old {
       text-decoration: line-through;
@@ -56,6 +61,24 @@
 
     &--yellow {
       background-color: yellow;
+    }
+  }
+
+  &__info-label {
+    @extend %font-weight-700;
+    width: 100px;
+  }
+
+  &__size {
+    li {
+      @extend %inline-block, %text-center, %font-weight-700;
+      width: 20px;
+      height: 20px;
+      border: 1px solid grey;
+
+      &:not(:last-child) {
+        margin-right: 10px
+      }
     }
   }
 }
