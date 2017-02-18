@@ -1,0 +1,61 @@
+.product {
+  background-color: #add8e6;
+  height: 200px;
+  padding: 15px;
+  margin-bottom: 25px;
+
+  &__title {
+    @extend %block, %font-weight-600;
+    color: black;
+    margin-bottom: 10px;
+  }
+
+  &__price {
+    @extend %font-weight-700;
+    margin-bottom: 10px;
+
+    &--old {
+      text-decoration: line-through;
+      color: #989898;
+      margin-right: 10px;
+    }
+
+    &--new {
+      color: #e95144;
+    }
+  }
+
+  &__colors {
+    li {
+      @extend %inline-block;
+      width: 20px;
+      height: 20px;
+      border-radius: 20px;
+      border: 1px solid grey;
+
+      &:not(:last-child) {
+        margin-right: 10px;
+      }
+    }
+
+    &--red {
+      background-color: red;
+    }
+
+    &--black {
+      background-color: black;
+    }
+
+    &--blue {
+      background-color: blue;
+    }
+
+    &--white {
+      background-color: white;
+    }
+
+    &--yellow {
+      background-color: yellow;
+    }
+  }
+}
