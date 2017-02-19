@@ -1,0 +1,37 @@
+doctype html
+html(lang='en')
+  head
+    title Ella
+    meta(name="viewport" content="width=device-width, initial-scale=1, user-scalable=no")
+    //styles
+    <!--[if lte IE 9]><link rel="stylesheet" type="text/css" href="css/ie.css"><![endif]-->
+  body
+    .wrapper
+      include layouts/header
+
+      .main
+        .container
+          .row.collection-wrapper
+            .col-md-4
+              .collection.text-center
+                a.collection__title(href="") Editor's pick
+            .col-md-4
+              .collection.text-center
+                a.collection__title(href="") Shoes
+            .col-md-4
+              .collection.text-center
+                a.collection__title(href="") Accessories
+            .col-md-4
+              .collection.text-center
+                a.collection__title(href="") Men
+            .col-md-4
+              .collection.text-center
+                a.collection__title(href="") Women
+            .col-md-4
+              .collection.text-center
+                a.collection__title(href="") Summer
+            .col-md-4
+              .collection.text-center
+                a.collection__title(href="") Winter
+      include layouts/footer
+    //scripts
