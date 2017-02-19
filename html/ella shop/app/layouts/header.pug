@@ -40,6 +40,13 @@ nav#navbar-example.navbar.navbar-default.navbar-static.header
             li.divider(role='separator')
             li
               a(href='#') Separated link
+        form.navbar-form.navbar-left(role='search')
+          .form-group
+            input.form-control(type='text', placeholder='Search')
+          //- button.btn.btn-default(type='submit') Search
+          a.btn.btn-default(href="/search.html") Search
+
+
       ul.nav.navbar-nav.navbar-right
         li#fat-menu.dropdown
           a#drop3.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
